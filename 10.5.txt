@@ -17,3 +17,18 @@ command line
 [c:] or [d:] 해당 드라이브로 이동 
 
 실습 및 셋팅 해볼 것
+
+실습 문제
+1. github에 test 레파지토리 생성
+2. test.html 파일 만들어서 test 레파지토리에 업로드.
+
+실습 정리
+
+1. github에 새로운 레파지토리 생성
+2. 레파지토리에 대응하는 url 및 코드 생성 됨
+3. vscode와 연계 - git clone 이용하여 대응 url 복제
+4. vscode 상에서 연동 파일 저장할 저장소 PC에서 지정
+5. 레파지토리 내 파일 생성
+6. 터미널 이용 레파지토리 코드 연동 
+7. git add . / git commit -m "메모" / git push 이용하여 PC<->github 연동
+
