@@ -34,4 +34,4 @@ command line
 
 
 git clone (최초로 받아올 때만)
-git pull 
+git pull (수정목적)
