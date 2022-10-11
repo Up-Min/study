@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naver 회원가입</title>
+    <link rel="stylesheet" href="./naver.css">
 </head>
 
 <body>
@@ -24,12 +25,23 @@
                 <br><input type="text" id="name">  </li>
             <li><label for="PW"> <b>비밀번호</b>  </label> 
                 <br><input type="text" id="PW" >  </li>
-            <li><label for="gender"> 성별 </label> 
-                <br><select name="choose" id="gender">
-                <option value="basic"> 성별 </option>
-                <option value="Man"> 남자 </option>
-                <option value="Woman"> 여자 </option>
-                <option value="non-select"> 선택안함 </option>
+            <li><label for="birthdate"> 생년월일 </label> 
+                <br>
+                <input type="text" name="year" id="birth_year" placeholder="년(4자)"> 
+                <select name="choose" id="birth_month">
+                <option value="mon"> 월 </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+                <option value="11"> 11 </option>
+                <option value="12"> 12 </option>
             </select>  </li>
             <li><label for="email"> 본인확인 이메일 <small>(선택)</small> </label> 
                 <br><input type="text" id="email" placeholder = "선택입력"> </li>

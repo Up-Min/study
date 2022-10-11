@@ -1,0 +1,9 @@
+*{
+    background-color :aliceblue ;
+}
+div {
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    border: 1px black;
+}
