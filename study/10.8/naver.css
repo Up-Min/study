@@ -1,9 +1,14 @@
 *{
     background-color :aliceblue ;
 }
+
 div {
     width: 600px;
-    margin: auto;
+    margin: 20px auto;
     padding: 10px;
     border: 1px black;
+}
+
+longblank {
+    width: 200px;
 }

@@ -10,25 +10,25 @@
 
 <body>
     <div>
-        <span><h1><img src="./naver.png" alt="네이버 메인" width="200"></h1></span>
+        <span><h1><img src="./naver.png" alt="네이버 메인" width="300"></h1></span>
     <form autocomplete="off">
         <ul>
-            <li><label for="ID"> <b>아이디</b>  </label> 
-                <br> <input type="text" id="ID" autofocus placeholder = "@naver.com">  </li>
-            <li><label for="PW"> <b>비밀번호</b>  </label> 
-                <br><input type="text" id="PW" >  </li>
-            <li><label for="PW"> <b>비밀번호 재확인</b>  </label> 
-                <br><input type="text" id="PW" >  </li>
+            <label class="longblank" for="ID"> <b>아이디</b>  </label> 
+                <br> <input type="text" id="ID" autofocus placeholder = "@naver.com">  
+            <br><label for="PW"> <b>비밀번호</b>  </label> 
+                <br><input type="text" id="PW" >  
+            <br><label for="PW"> <b>비밀번호 재확인</b>  </label> 
+                <br><input type="text" id="PW" >  
         </ul>
         <ul>
-            <li><label for="name"> <b>이름</b>  </label> 
-                <br><input type="text" id="name">  </li>
-            <li><label for="PW"> <b>비밀번호</b>  </label> 
-                <br><input type="text" id="PW" >  </li>
-            <li><label for="birthdate"> 생년월일 </label> 
+            <label for="name"> <b>이름</b>  </label> 
+                <br><input type="text" id="name"> 
+            <br><label for="PW"> <b>비밀번호</b>  </label> 
+                <br><input type="text" id="PW" > 
+            <br><label for="birthdate"> <b>생년월일</b> </label> 
                 <br>
-                <input type="text" name="year" id="birth_year" placeholder="년(4자)"> 
-                <select name="choose" id="birth_month">
+                <input  type="text" name="year" id="birth_year" placeholder="년(4자)" > 
+                <select name="month" id="birth_month">
                 <option value="mon"> 월 </option>
                 <option value="1"> 1 </option>
                 <option value="2"> 2 </option>
@@ -42,9 +42,10 @@
                 <option value="10"> 10 </option>
                 <option value="11"> 11 </option>
                 <option value="12"> 12 </option>
-            </select>  </li>
-            <li><label for="email"> 본인확인 이메일 <small>(선택)</small> </label> 
-                <br><input type="text" id="email" placeholder = "선택입력"> </li>
+                </select>
+                <input type="text" name="day" id="birth_dat" placeholder="일">  
+            <label for="email"> 본인확인 이메일 <small>(선택)</small> </label> 
+                <br><input type="text" id="email" placeholder = "선택입력">
         </ul>
         <ul>
              <li><label for="local"> 휴대전화 </label> <select name="choose" id="gender">
