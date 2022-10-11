@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form Basic</title>
+</head>
+<body>
+    <form>
+        <!-- 자료를 넘겨줄 때 어떤 내용인지 알려줄 필요가 있기 때문에, name을 추가로 지정해줌
+         -->
+        <input type="checkbox" name="color" value="blue" checked>blue
+        <!-- checked 들어갔을경우 default가 체크된 상태가 됨. -->
+        <input type="checkbox" name="color" value="red">red
+        <hr> <!-- checkbox : 중복선택이 가능 -->
+        <input type="checkbox" name="color2" value="blue">blue
+        <input type="checkbox" name="color2" value="red">red
+        <!-- 보통 네임을 같게 들어가 줌 -->
+
+        <hr> <!-- radio : 하나만 선택이 가능 함, name이 같아서 중복선택이 안 됨 --> 
+        <input type="radio" name="color" value="blue">blue
+        <input type="radio" name="color" value="red">red
+        <hr> <!-- name이 다른 radio, 같은 정보라 할 수 없기 때문에 중복선택이 가능해짐 -->
+        <input type="radio" name="test1" value="blue">blue
+        <input type="radio" name="test2" value="red">red
+    </form>
+</body>
+</html>

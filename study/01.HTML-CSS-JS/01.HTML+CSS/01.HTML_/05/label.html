@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>label 태그 사용하기</title>
+</head>
+<body>
+  <form>
+    <label for="user-id">아이디(6자 이상)</label> <!-- 라벨 태그 -->
+    <!-- input태그 앞에 이름을 지정해주는, 항상 for이라는 속성을 가지고 있음. 이것은 
+    뒤에 지정할 input id태그와 동일하게 넣어주면 됨. (뒤의 내용과 연결되어 있다는 의미를 내포함) -->
+
+    <!-- 폼태그에서 가장 많이 사용되는 내용 -->
+    <input type="text" id="user-id"> 
+    <!-- 입력 받는 타입, text(문자, default input 타입) / 사용하기를 원하는 태그마다 
+      고유의 id라는 것을 붙여줌 (ex.user-id)-->
+      <!-- id 규칙 : 시작은 소문자로 하고, 의미있는 걸 사용하고, 되도록 언더바 _ 를 사용하자 
+        태그는 중복되면 안된다. -->
+   <label for="user_password"> 비밀번호 입력</label>
+        <input type="text" id="user_password">
+  </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>프런트엔드 개발자 지원서</title>
+    <style>
+			#container { 
+				width:520px;
+				border:1px solid black;
+				padding:20px 40px;
+				margin:0 auto;
+			}
+      fieldset { margin-bottom:15px; }
+      legend { font-weight:bold; }
+			ul {list-style-type: none;}
+			li { line-height:30px;}
+    </style>
+  </head>
+  <body>
+		<div id="container">
+			<h1>프런트엔드 개발자 지원서 </h1>
+			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+			<hr>
+			<form autocomplete="off">
+			<h4>개인정보</h4>
+				<ul>
+					<li><label for="name"> 이름 </label>
+					<input type="text" id="name" required autofocus placeholder="공백없이 입력하세요"></li>
+					<li><label for="tel"> 연락처 </label>
+						<input type="text" id="tel" required> </li>	
+					<li>
+						<label for="add"> 거주지역 
+							<select name="add" id="where">
+								<option value="seo"> 서울 </option>
+								<option value="kkd"> 경기 </option>
+								<option value="ddj"> 대전 </option>
+								<option value="ddg"> 대구 </option>
+								<option value="bbs"> 부산 </option>
+							</select>
+						</label>
+					</li>
+					<li><p><u><b>*개인정보는 필수 입력 사항입니다.</b></u></p></li>
+				</ul>
+			<h4>지원 분야</h4>
+				<ul>
+					<!-- <li><label><input type="radio" name = "choose" value="web"> 웹 퍼블리싱</label></li>
+					<li><label><input type="radio" name = "choose" value="app"> 웹 애플리케이션 개발 </label></li>
+					<li><label><input type="radio" name = "choose" value="env"> 개발 환경 개선</label></li>
+					<input type="radio" name="" id="" value="">  emit으로 radio 썼을 시, id 뜨지만, 
+					실제 뒤에 value 해줘야함 -->
+
+					<label>
+						<select name="apl" id="apply">
+							<option value="web">웹 퍼블리싱</option>
+							<option value="app">웹 애플리케이션 개발</option>
+							<option value="wev">개발 환경 개선</option>	
+						</select> <!-- 지원분야를 선택창으로 변경 : select - option -->
+					</label>
+				</ul>
+			<h4>지원 동기</h4>
+					<label for="why"></label> 
+					<textarea id="why" cols="60" rows="5" 
+					placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+			<div>
+				<!-- <input type="submit" value="접수하기">
+				<input type="reset" value="다시 쓰기"> -->
+				<button type="submit"> 접수하기 </button>
+				<button type="reset"> 다시 쓰기 </button>	
+			</div>
+			</form>
+		</div>
+  </body>
+</html>

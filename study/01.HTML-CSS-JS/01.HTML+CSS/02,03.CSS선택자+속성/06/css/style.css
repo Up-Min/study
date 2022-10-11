@@ -1,0 +1,16 @@
+h1 {      
+  padding:10px;
+  background-color:#222;
+  color:#fff;
+}
+div{
+  padding-top: 10px;
+  background-color: antiquewhite;
+  font-size: medium;
+  /* font-style: italic; */
+  color: darkred;
+}
+
+form{
+  background-color: #222;
+}

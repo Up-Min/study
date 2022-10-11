@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짱짱한 실습 페이지</title>
+    <style>
+        table, th, td {
+          border:2px solid black; /* 표 테두리, 중심 선 크기 */
+          border-collapse: collapse;
+        }
+        th, td { padding: 10px 10px; }
+      </style>
+</head>
+<body>
+    <div>
+        <h1>게시판 실습 만들어보기</h1>
+        <ol>
+            <h2><li> 중간에 막는 선 만들어보기 </li></h2>
+            <h2><li> 볼드체, 주석 연습해보기 </li></h2>
+            <h2><li> table 만들어보기 </li></h2>
+        </ol>
+        <br>
+        <h4> [hr 태그 이용하여 중간에 막는 선 만들어보기]</h4>
+        <hr>
+        <br>
+        <h4> [p태그 안에 strong 태그, u태그 연습] </h4>
+        <p> <strong>멋쟁이 토마토 토마토</strong> 나는야 주스될거야 <strong><u>꿀꺽</u></strong> </p>
+        <h4>[blockquote 태그, em 태그, del-ins 태그]</h4>
+        <dl> 
+            <dt>토마토 이야기</dt>
+            <dd><blockquote> <em> <del>"토마토 주스가 참 맛있습니다"</del> </dd>
+            <dd><br> <img src="image\bazil.jpg" alt="바질토마토에이드" width="30%">
+                <br>
+                <ins><b>아뇨 바질 토마토 에이드가 더 맛있습니다.</b></ins> </em></blockquote></dd>
+            <dd> 
+                <br> <img src="image\ak.jpg" alt="악수" width="40%">
+                <br> <img src="image\wash.jpg" alt="손씻기" width="40%">
+                <p><b><em>네 당신 생각이 옳습니다</em></b></p>
+            </dd>
+        </dl>
+        
+        <hr>
+        <br>
+        <h4>[테이블 만들어보기]</h4>
+        <table>
+            <caption><h2>!!!! 이번주 점심 !!!!!</h2></caption>
+            <colgroup>
+                
+             <col span = "1" style="background-color: white">     
+             <col span = "1" style="background-color: red"> 
+             <col span = "1" style="background-color: orange">
+             <col span style="background-color: yellow">
+             <col span style="background-color: green">
+             <col span style="background-color: blue">
+             <col span style="background-color: darkblue">
+             <col span style="background-color: blueviolet">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>메뉴/날짜</th>
+                    <th> 일 </th>
+                    <th> 월 </th>
+                    <th> 화 </th>
+                    <th> 수 </th>
+                    <th> 목 </th>
+                    <th> 금 </th>
+                    <th> 토 </th>
+                </tr>    
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 된장찌개 </td>
+                    <td> 쉽니다 </td>
+                    <td> ? </td>
+                    <td> 가능 </td>
+                    <td> 불가능 </td>
+                    <td> 가능 </td>
+                    <td> 쉽니다 </td>
+                    <td>쉽니다</td>
+                </tr>
+                <tr>
+                    <td>김치찌개</td>
+                    <td> 쉽니다 </td>
+                    <td>불가능</td>
+                    <td>? </td>
+                    <td>가능</td>
+                    <td>불가능</td>
+                    <td>불가능</td>
+                    <td>쉽니다</td>
+                </tr>
+                <tr>
+                    <td>한식뷔페</td>
+                    <td>쉽니다</td>
+                    <td>가능</td>
+                    <td>가능</td>
+                    <td>가능</td>
+                    <td>가능</td>
+                    <td>가능</td>
+                    <td>쉽니다</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
