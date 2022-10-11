@@ -1,12 +1,17 @@
 *{
-    background-color :aliceblue ;
+    background-color :#eee ;
 }
 
 div {
     width: 600px;
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 10px;
     border: 1px black;
+}
+
+.container{
+    border: 2px black;
+
 }
 
 longblank {

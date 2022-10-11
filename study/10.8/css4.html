@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고급 선택자</title>
+  <style>
+    /* 속성선택자 */ 
+    a[href] {
+      background-color: yellow;}
+    /* a태그 중에서 href의 속성을 가지는 애들을 선택한다 */
+
+    a[target = "_blank"] {
+      background-color: black;
+    }
+    /* a태그 중에서 12번 줄에 해당하는 속성이 있는 아이일 경우 색깔 변경 */
+
+    a[target = "_parent"] {
+      background-color: orange;
+    }
+
+  </style>
+</head>
+<body>
+	<ul>
+		<li><a>메인 메뉴 : </a></li>
+		<li><a href="#" target = "_blank">메뉴 1</a></li>
+		<li><a href="#" target="_parent">메뉴 2</a></li>
+		<li><a href="#">메뉴 3</a></li>
+		<li><a href="#">메뉴 4</a></li>
+	</ul>
+</body>
+</html>
