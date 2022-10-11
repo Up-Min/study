@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체선택자 "*" : body, head, html 에 해당하는 색을 바꿔준다 */
+        *{
+            color: brown;
+            font-style: italic;}
+        /* 태그(타입) 선택자 : 선택한 태그 안에 있는 스타일을 바꿔준다 */
+        h1{
+            color: brown;
+            font-style: italic;}
+        /* 클래스 선택자 : 특정 태그에만 스타일을 바꿔준다 */
+        /* 의미가 있는 이름으로 특정 클래스를 지정하고, "." 이후 해당 이름을 넣고 스타일을 적용한다  */
+        .title {
+            color: darkblue;
+            font-size: 50px;} 
+
+        .on{
+            background-color: khaki;
+            font-style: italic;
+        }
+
+        /* id 선택자 : 태그에 특정 id를 입력하고, "#" 이후 해당 id이름을 넣고 스타일 적용 */
+        /* id명도 동일하게 의미가 있는 내용으로 지어줘야하며, class와 이름이 겹치면 안 됨 */
+        /* class는 공통적으로 속성을 적용하고 싶을 때 사용하나, id는 엘레먼트 따로따로 적용해야함 
+        (고유 id를 생각하면 편합니다) */
+        /* 요즘에는 id를 잘 안쓰고 class를 위주로 사용한다. 어차피 class로도 따로따로 할 수 있기 때문에 */
+            
+            #board {
+                color: crimson;
+            }
+            #contents{
+                color: deeppink;
+            }
+        </style>
+    </head>
+<body>
+    <!-- 선택자 -->    
+    <h1 class="title on" id = "board"> 자유게시판</h1>
+    <p> hello </p>
+    <p class="title" id = "contents"> hello </p>
+    <p > hello </p>
+    <span> tag </span> 
+    
+    <form>
+        <input type="text" name="user_id" id="user_id">
+        <!-- name : 서버에 넘겨줄 때, id : 태그에 적용되는 내용 -->
+    </form>
+
+</body>
+</html>

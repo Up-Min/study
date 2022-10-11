@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver 회원가입</title>
+</head>
+
+<body>
+    <div>
+        <span><h1><img src="./naver.png" alt="네이버 메인" width="200"></h1></span>
+    <form autocomplete="off">
+        <ul>
+            <li><label for="ID"> <b>아이디</b>  </label> 
+                <br> <input type="text" id="ID" autofocus placeholder = "@naver.com">  </li>
+            <li><label for="PW"> <b>비밀번호</b>  </label> 
+                <br><input type="text" id="PW" >  </li>
+            <li><label for="PW"> <b>비밀번호 재확인</b>  </label> 
+                <br><input type="text" id="PW" >  </li>
+        </ul>
+        <ul>
+            <li><label for="name"> <b>이름</b>  </label> 
+                <br><input type="text" id="name">  </li>
+            <li><label for="PW"> <b>비밀번호</b>  </label> 
+                <br><input type="text" id="PW" >  </li>
+            <li><label for="gender"> 성별 </label> 
+                <br><select name="choose" id="gender">
+                <option value="basic"> 성별 </option>
+                <option value="Man"> 남자 </option>
+                <option value="Woman"> 여자 </option>
+                <option value="non-select"> 선택안함 </option>
+            </select>  </li>
+            <li><label for="email"> 본인확인 이메일 <small>(선택)</small> </label> 
+                <br><input type="text" id="email" placeholder = "선택입력"> </li>
+        </ul>
+        <ul>
+             <li><label for="local"> 휴대전화 </label> <select name="choose" id="gender">
+                <option value="kor"> 대한민국 +82 </option>
+                <option value="grc"> 그리스 +30  </option>
+                <option value="njr"> 니제르 +227 </option>
+                <option value="npl"> 네팔 +977 </option>
+            </select>  </li>
+            <li><label for="phone"> </label> <input type="text" id="phone" placeholder="전화번호 입력"> <button type="submit"> <img src="./autho.PNG" alt="autho">  </button> </li>
+            <li><label for="autho"> </label> <input type="text" id="autho" placeholder="인증번호 입력하세요" >  </li>
+
+        </ul>
+        <button type="submit"> <img src="./gaip.PNG" alt="gaip">  </button> 
+    </form>
+</div>
+</body>
+</html>
