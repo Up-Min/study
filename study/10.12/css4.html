@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        block: margin과 padding을 자유롭게 지정 가능, width-height도 동일하게 자유로움
+        ex) div, 시멘틱태그(레이아웃 형성시), p태그, h1~h6, table, ul, ol 등등
+
+        inline: margin과 padding을 좌,우만 지정 가능, width-height 변경 안 됨.
+        ex) a, img, span, button, text-area, select, input, label 등
+
+        inline-block: inline태그처럼 정렬이 되지만 block 태그의 특성을 가지게 됨.
+        즉, 완전히 속성을 바꿔버리는 block와 가시적인 차이가 있음.
+        */
+        p{
+            display: inline; /* 인라인처럼 바꿔 줄 수 있음 */
+            display: none; /* 안보임 */
+        }
+
+        span.b{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin: 30px;
+            padding: 30px;
+            display: inline-block; /* inline이지만, 블록태그처럼 사용할 수 있어짐 */
+            display: block; /* span태그를 블록태그처럼 사용할 수 있어짐 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 태그의 종류. 블록태그, 인라인태그 -->
+    <!-- 블록태그는 굳이 줄바꿈(br)을 하지 않아도 줄바꿈이 됨, 블럭같이 애들을 둘러싸고 있음.  -->
+    <p>블록태그</p>
+    <p>블록태그</p>
+
+    <!-- 인라인태그, span. 딱히 감싸고 있지않고 그냥 그 애들 그자체임-->
+    <span class="a"> 인라인태그 </span>
+    <span class="b"> 인라인태그 </span>
+
+    
+
+</body>
+</html>

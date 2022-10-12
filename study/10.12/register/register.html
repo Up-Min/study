@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- 복습개념 로그인 폼 만들기 -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    <form id = "signup" > <!-- 로그인, 개인정보 필드셋 만들어야함 -->
+        <fieldset> <!-- 앞에 legend 들어가면 틀+이름을 만들 수 있음 -->
+            <legend> 로그인 정보 </legend>
+            <ul> <!-- 큼직큼직한 애들 먼저 구성해라. 처음에 구조 다 잡고 그담에 자잘한 속성 해주기 -->
+
+                <li> <!-- li이후 input애들 잘 넣고, 하나하나 구성하자 -->
+                    <label for="userid">아이디</label> <!-- input id내용 그대로 복붙 -->
+                    <input type="text" name="userid" id="userid" required autofocus> <!-- id, name 동일하게 -->
+                </li>
+                <li> 
+                    <label for="pwd1">비밀번호</label>
+                    <input type="password" name="pwd1" id="pwd1" required>
+                </li>
+                <li> 
+                    <label for="pwd2">비밀번호 확인</label>
+                    <input type="password" name="pwd2" id="pwd2" required>
+                </li>
+                <li> 
+                    <label for="level">회원등급</label>
+                    <input type="text" name="level" id="level" readonly value="준회원">
+                    <!-- 내용을 선택하거나 바꿀 수 없이 해당 값으로 읽기만 가능하게 설정 해 둠. readonly -->
+                </li>
+
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend> 개인정보 </legend>
+            <ul>
+                <li> 
+                    <label for="username">이름</label>
+                    <input type="text" name="username" id="username" placeholder="5자미만 공백없이" required>
+                </li>
+                <li> 
+                    <label for="email">메일주소</label>
+                    <input type="email" name="email" id="email" placeholder="abcd@domain.com" required autocomplete="off"> 
+                    <!-- 메일주소, 연락처 input 타입 바꿔주기 -->
+                </li>
+                <li> 
+                    <label for="tel">연락처</label>
+                    <input type="tel" name="tel" id="tel" autocomplete="off">
+                </li>    
+            </ul>
+            
+        </fieldset>
+        
+        <fieldset> <!-- 버튼 제작 -->
+            <button type="submit"> 제출 </button>
+        </fieldset>
+
+    </form>
+</body>
+</html>
