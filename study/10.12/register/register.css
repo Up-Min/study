@@ -1,0 +1,68 @@
+@charset "utf-8"; /* 깨지지 않게 인코딩 해주는 것, 해주면 좋다 */
+
+/* 맨 처음에 초기화 코드 반드시 들어가야 함. */
+
+*{
+    margin: 0;
+    padding: 0; 
+    /* 브라우저에 있는 약간의 틈을 없애기 위해 넣는 코드 */
+}
+
+body{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+#signup{
+    background-color: white;
+}
+
+#signup fieldset{ /* 코드는 가독성을 위해서 최대한 붙여준다 */
+/* 계층구조를 잘 생각해서 적어줘라 */
+
+}
+
+/* submit 버튼 칸 */
+#signup fieldset:last-of-type {
+    
+}
+
+/* 로그인 정보, 개인정보 칸 */
+#signup legend{
+
+}
+
+/* 로그인 정보, 개인정보 안에 li에 해당하는 칸 */
+#signup ul li{
+
+}
+
+/* label 칸에 대응하는 아이들 */
+#signup label{
+
+}
+
+/* 제출버튼 */
+#signup button{
+
+}
+
+/* input type 애들*/
+#signup input [type=text], #signup input [type=password], 
+#signup input [type=tel], #signup input [type=email]{
+
+}
+
+/* input 애들 중 required '속성'을 가진 애들 */
+#signup input[required]{
+
+}
+
+#signup input[readonly]{
+
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+#signup button :hover{
+
+}
