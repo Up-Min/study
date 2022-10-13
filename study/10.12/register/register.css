@@ -10,59 +10,91 @@
 
 body{
     background-color: #ccc;
-    padding: 20px;
+    padding : 20px;
 }
 
 #signup{
-    background-color: white;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px; /* 보더를 기준으로 안쪽에 있는  */
+    width: 400px;
 }
 
 #signup fieldset{ /* 코드는 가독성을 위해서 최대한 붙여준다 */
 /* 계층구조를 잘 생각해서 적어줘라 */
-
+    border: 1px solid #ccc;
+    margin-bottom: 30px; /* 보더 기준 바깥쪽에 있는 */
 }
 
 /* submit 버튼 칸 */
 #signup fieldset:last-of-type {
-    
+    border: none; /* 선 없앰 */
 }
 
 /* 로그인 정보, 개인정보 칸 */
 #signup legend{
-
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
 }
 
 /* 로그인 정보, 개인정보 안에 li에 해당하는 칸 */
 #signup ul li{
-
+    line-height: 30px;
+    list-style: none; /* 불릿 사라지기 */
+    padding: 5px 10px;
+    margin-bottom: 2px;
 }
 
 /* label 칸에 대응하는 아이들 */
 #signup label{
-
+    float: left;
+    font-size: 13px;
+    width: 110px;
 }
 
 /* 제출버튼 */
 #signup button{
-
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    letter-spacing: 1px; /* 단어간의 간격 띄워 줌 */
+    padding: 10px 25px;
+    display: block;
+    margin: 0 auto; /* 가운데 정렬하는 애인데 인라인태그에는 맞지가 않음 */
 }
 
 /* input type 애들*/
 #signup input [type=text], #signup input [type=password], 
 #signup input [type=tel], #signup input [type=email]{
-
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
+}
+/* 또 다른 방법 -> input에 not 옵션을 넣음 */
+#signup input:not([type=radio]){
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
 }
 
 /* input 애들 중 required '속성'을 가진 애들 */
 #signup input[required]{
-
+    border: 1px red solid;
 }
 
 #signup input[readonly]{
-
+    border : none
 }
 
 /* 버튼에 마우스를 올렸을 때 */
-#signup button :hover{
-
+#signup button:hover{
+    background-color: #222;
+    color: #fff;
 }

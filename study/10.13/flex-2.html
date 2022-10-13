@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>플렉서블 박스 레이아웃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      background-color: #eee;
+      border: 1px solid #222;
+      margin-bottom: 30px;
+      display: flex;
+    }
+    .box {
+      padding: 5px 45px;
+      margin: 5px;   
+      width: 80px;
+      background-color: #222;   
+    }
+    #opt1{ /* flex-wrap:아이템들이 넘칠 때 감싸는 기능 */
+      flex-wrap: nowrap; /*default */
+      /* 칸이 줄어도 그래도 한줄에 있음, 애들 사이즈가 작아짐 */
+    }
+    #opt2{ 
+      flex-wrap: wrap; 
+      /* 밑으로 넘김 */
+    }
+    #opt3{ 
+      flex-wrap: wrap-reverse;
+      /* 밑으로 넘기는거를 반대로 감싼다 */
+    }                 
+    p {
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>    
+  </div>
+  <div class="container" id="opt2">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>    
+  </div>
+  <div class="container" id="opt3">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>    
+   </div>          
+</body>
+</html>
