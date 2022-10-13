@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ /* body 크기 이후 그 안에 section, aside 들어갈 수 있게 수치를 지정해줘야함 */
+            width: 962px;
+            margin: 0 auto;
+
+        }
+        #aside{
+            width: 200px;
+            height: 100%;
+            float: right; /* 오른쪽으로 몰아버리는 float right */
+        }
+        .section {
+            width: 760px;
+            float: left;
+        }
+
+        #wrap { /* 내용물이 더 넘어오지 못하게 칸 구분 
+            범위를 넘어오는 아이 윗 태그에 하는게 좋음*/
+            overflow:hidden 
+        }
+    </style>
+
+</head>
+<body> <!-- 항상 큰 골격을 먼저, div를 지금은 쓰지만, 나중에는 시멘틱태그를 쓰는게 좋다 -->
+    <div id = "header"> <h1>header</h1> </div>
+    <div id = "navigation"> <h1> navigation </h1> </div>
+    <div id = "wrap"> 
+        <div id="aside" class="section">
+             <h1> Aside </h1> 
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At delectus, nulla sed sint fugiat ad iure repellat commodi nesciunt odio accusantium, sequi voluptatem consequatur velit, amet sapiente nisi molestiae natus.</p>
+        </div>
+        <div id="section1" class="section">
+             <h1> section1 </h1> 
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, blanditiis soluta voluptas perspiciatis eum laboriosam incidunt ullam sit iusto enim ex molestiae aperiam praesentium accusantium illum, labore quas alias quo!</p>
+        </div>
+        <div id="section2" class="section">
+             <h1> section2 </h1> 
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae voluptatum nihil neque nam animi et repudiandae ratione rem molestias exercitationem, distinctio in, eligendi iusto recusandae facilis, corrupti ipsa esse.</p>
+        </div>
+        <div id="section3" class="section">
+             <h1> section3 </h1> 
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores similique molestiae adipisci fuga? Maiores odit sit pariatur doloribus quam molestias necessitatibus fugit praesentium, assumenda ut officiis exercitationem tenetur magnam sequi!</p>
+        </div>
+    </div>
+    <div id= "footer"> <h1> footer </h1> </div>
+</body>
+</html>
