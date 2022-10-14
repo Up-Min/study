@@ -45,7 +45,7 @@ a{
     color: #fff;
     }
 
-/* index.html (fixed) */
+/* index.html (반응형으로 바꿈) */
 /*  */
 
 .wrap {
@@ -273,4 +273,75 @@ a{
     font-size: 1.4rem;
 }
 
+    /* 767~900px 사이에 생기는 상태표시줄 처리하기 */
+@media all and (max-width : 1000px){
+    .wrap{
+        width: 95%; /* 가시영역에 꽉차게 함 */
+    }
 
+    .board_wrap{
+        width: 95%;
+    }
+
+    .board_view{
+        width: 95%;
+    }
+}
+
+@media all and (max-width : 767px) /* 0px~767px*/
+    {
+        .wrap{ 
+            width: 95vw; /* 1000px로 고정된 wrap를 바꿔줌, 95% 와 동일한 뷰포트*/
+        } 
+
+        .board_list th:nth-of-type(1),
+        .board_list td:nth-of-type(1){ /* 1번째 열 번호, 숫자 생략 */
+            display: none;
+        }
+        .board_list th:nth-of-type(3),
+        .board_list td:nth-of-type(3){ 
+            display: none;
+        }
+        .board_list th:nth-of-type(4),
+        .board_list td:nth-of-type(4){ 
+            display: none;
+        }
+        
+        .board_wrap{
+            width: 95vw;
+        }
+
+        .board_write .title dt{
+            width: 70px;
+        }
+
+        .board_write .info dt{
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        .board_write .info input[type="text"],
+        .board_write .info input[type="password"]{
+            width: 90%;
+        }
+
+        .board_view .info dl {
+            padding: 0 10px;
+        }
+
+        .board_view .info dl dt,
+        .board_view .info dl dd {
+            font-size: 1.2rem;
+            display: inline-block;
+        }
+
+        .board_view .info dl::before{
+            display: none;
+        }
+
+        .board_view .info dl:nth-of-type(1),
+        .board_view .info dl:nth-of-type(3){
+            display: none;
+        }
+
+    }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header"> 
+        <div class="header__nav"> <!-- BEM표기법에 기반해서 부모태그 '__' 언더바 2개 자식 이름 -->
+            <h1>logo</h1>
+            <nav> 
+                <ul>
+                    <li> 메뉴소개 </li>
+                    <li> 매장소개 </li>
+                    <li> 이벤트 </li>
+                    <li> 브랜드스토리 </li>
+                </ul>
+            </nav>
+            <div class="delivery-order"> 딜리버리 주문 </div>
+        </div>
+    </header>
+    <main class="wrap"> 
+        <section class="slider">
+            <div class="slider__content con"> 
+
+            </div> <!-- 실제 컨텐츠가 들어가는 부분, section에 바로 들어가면 따로 관리하기가 힘듬. -->
+            <!-- 한번에 조정하기 편하게 하려고 depth를 한번더 함. -->
+        </section>
+        <section class="youtube">
+            <div class="youtube__content con"> </div> <!-- 연동성이 있는 이미지는 li로 하는것이 좋음 -->
+        </section>
+        <section class="sns">
+            <div class="sns__content con" > </div>
+        </section>
+        <section class="guide">
+            <div class="guide__content con"> </div>
+        </section>
+        <section class="store">
+            <div class="store__content con"> </div>
+        </section>
+        <section class="banner">
+            <div class="banner__content con"> </div>
+        </section>
+    </main>
+    <footer class="footer"> </footer>
+</body>
+</html>
