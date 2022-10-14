@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 뷰포트 기본 설정 -->
+    <!-- width : 뷰포트의 너비 / device-width : 사용자가 접속한 디바이스의 화면 너비 
+    initial-scale : 확대-축소값 (접속할 때 얼마나 확대해서 보여줄 것인가?)
+    minimum-scale : 사용자가 최소로 줄일 수 있는 값 / maximum-scale : 사용자가 최대로 늘릴 수 있는 값
+    user-scalable : 확대-축소 가능여부 
+    디폴드, 기본값이 이미 다 있기 때문에 따로 건드릴 필요는 없다
+    -->
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 960px;
+            height: 500px;
+            background: skyblue;
+            margin: 0 auto;
+        }
+
+        #wrap div{
+            /* width: 300px; px로 특정 크기가 지정된 상태 */
+            /* 반응형에서는 맞지 않기 때문에 비율로 바꿔줘야함. */
+            width: 31.25%;
+            height: 100%;
+            background: salmon;
+        }
+        /* 반응형 시작 */
+        /* 보통 사용자의 화면 width가 안에 내용물과 맞닿을 때부터 px로 비율화가 되는 모습을 보임. 
+        만들 때 생각하고 만들어라.
+        */
+
+        /* 0 ~ 959px */
+        @media screen and (max-width: 959px) /* 0~959까지 적용, 저 위에 #wrap~div는 그 이상부터 적용 */
+        {
+          #wrap{
+            width: 100%;
+          }  
+
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <div> </div>    
+    </div>
+</body>
+</html>
