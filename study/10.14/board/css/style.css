@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/* 초기화 속성 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;    
+    color: black;
+}
+
+/* 공통 버튼 */
+
+.bt_wrap{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bt_wrap a{
+    display: inline-block; /* margin, padding 적용하기 위해! */
+    min-width: 80px; /* 80이하로 버튼 사이즈 작아지지 않게 */
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.bt_wrap a:hover{
+    text-decoration: underline;
+}
+
+.bt_wrap a.on{
+    background: #000;
+    color: #fff;
+    }
+
+/* index.html (fixed) */
+
+.wrap {
+    width: 1000px; /* 고정시킨 상태에서 하위태그에 비율을 넣어도 무관하다
+    아직은 fixed된 상태 */
+    margin: 0 auto;
+}
+
+.board_list{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse; /* 테이블 선 하나로 합침 */
+    font-size: 1.5rem; /* html 셋팅의 1.5배 rem */
+}
+
+.board_list caption{
+    padding: 30px;
+}
+
+.board_list th, td {
+    border-spacing: 0;
+    border-bottom: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.board_list td.title > a:hover{ /* td중 title인 애들 바로 아래 애들. 그 애들한테 마우스 올라가면 줄 생김 */
+    text-decoration: underline;
+}
+
+.bt_list{
+    text-align: right;
+}
+
+.board_page{ /* 아래 보드 페이지 표시 전체 */
+    margin-top: 30px;
+    text-align: center;
+    display: flex; /* flex 해놔야 반응형 할 때 편하다 */
+    justify-content: center; /*  */
+}
+
+.board_page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box; /* border, padding 포함 크기 지정 */
+    border-left: 0;
+    line-height: 32px; /* height와 line-height가 같으면 수직정렬 가능 */
+}
+
+.board_page a:hover{
+    text-decoration: underline;
+}
+
+.board_page a.bt { /* 페이지 표시 좌우 화살표 */
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.board_page a.num { /* 페이지 표시 글자 폰트  */
+    font-size: 1.4rem;
+}
+
+.board_page a.num.on{
+    border-color: #000;
+    background-color: #000;
+    color: #fff;
+}
+
+/* write.html, view.html */
+
+.board_wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_title{
+    margin: 30px 10px;
+}
+
+.board_title strong{
+    font-size: 3rem;
+}
+
+.board_title p{
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+/* write.html only */
+
+.board_write{
+    border-top: 2px solid #000;
+}
+
+.board_write .title, .board_write .info{
+    padding: 15px;
+}
+
+.board_write .info{ /* 위 아래 선 만들기 */
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px solid #000;
+    font-size: 0; /* 넣어줘야 아이디 비밀번호가 한줄에 들어감 */
+}
+
+.board_write .title dl{
+    font-size: 0;
+}
+
+.board_write .info dl{ /* 원래 블록태그를 인라인태그로 걸어서 한줄로 만들어 줌 */
+    display: inline-block; 
+    width: 50%; /* 반반 */
+    vertical-align: middle; /* 수직정렬 */
+    /* (위아래 기준) 화면 중간에 글자 오게 해줌 */
+}
+
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem; /* 여기서 다시 폰트 드러냄 */
+} 
+
+.board_write .title dt,
+.board_write .info dt{
+    width: 100px;
+}
+
+.board_write .title dd{
+    width: calc(100% - 100px); 
+    /* 100%에서 100px만큼 빼서 남은 영역들을 dd의 width로 줌 */
+    /* 알아서 옆의 제목 칸을 빼주고 반응하는 width가 됨. */
+}
+
+.board_write .title input[type="text"],
+.board_write .info input[type="text"],
+.board_write .info input[type="password"]{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.board_write .title input[type="text"]{
+    width: 80%;
+}
+
+.board_write .cont{
+    border-bottom: 1px solid black;
+}
+
+.board_write .cont textarea{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 1.3rem;
+    resize: vertical;
+    /* 세로로 사이즈를 조정할 수 있음 */
+}
+
+/* view.html */
+
+.board_view{
+    width: 100%;
+    border-top: 2px solid black;
+}
+
+.board_view .title{
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 2rem;
+}
+
+.board_view .info {
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    font-size: 0;
+}
+.board_view .info dl {
+    position: relative; /* absolute를 쓰려고 함 */
+    display: inline-block; /* for 한줄 정렬 */
+    padding: 0 20px;
+}
+
+.board_view .info dl:first-child{
+    padding-left: 0;
+}
+
+.board_view .info dl::before{
+    /* 번호, 글쓴이, 작성일 구분선 만들기 위해  */
+    /* 비포를 선언하고 따로 색깔을 넣어줌
+    위치는 .info dl에 absolute로 위치 대비 */
+    content: "";
+    position: absolute;
+    top: 1px; 
+    left: 0;
+    display: block;
+    width: 1px; /* 선을 만들어줌 */
+    height: 15px;
+    background: #ddd;
+}
+
+.board_view .info dl:first-child::before{
+    display: none; /* 번호 1 앞에 있는 선 없앰 */
+} 
+
+.board_view .info dl dt,
+.board_view .info dl dd{
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.board_view .info dl dd{
+    margin-left: 10px;
+    color: #777;  
+}
+
+.board_view .cont{
+    padding:15px;
+    border-bottom: 1px solid #000;
+    line-height: 160%;
+    font-size: 1.4rem;
+}
+
+
