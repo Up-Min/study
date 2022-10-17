@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+.board{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.board caption{
+    padding: 30px;
+}
+
+.board th, td {
+    border-spacing: 0;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.board td.content:hover{
+    text-decoration: underline;
+}
+
+.submitbutton{
+    text-align: right;
+}
+
+.submitbutton a{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    min-width: 80px;
+    padding: 20px;
+    margin-left: 10px;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    background-color: #eee;
+}
+
+.submitbutton a:hover{
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+}
+
+
+.listpage{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.listpage a{
+    display: inline-block;
+    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-left: 0px;
+    line-height: 30px;
+}
+
+.listpage a:hover{
+    text-decoration: underline;
+    background-color: black;
+    color: white;
+}
+
+.listpage a.on{
+    background-color: black;
+    color: #eee;
+}
+
+@media all and (max-width : 1000px) {
+    .wrap{
+        width: 95vw;
+     }
+     .board{
+        width: 95vw;
+     }
+
+    }
+ @media all and (max-width : 767px) {
+        .wrap{
+            width: 95vw;
+        }
+
+        .board{
+            width: 95vw;
+         }    
+
+        .board th:nth-of-type(3),
+        .board th:nth-of-type(5){
+            display: none;
+        }
+
+        .board td:nth-of-type(3),
+        .board td:nth-of-type(5){
+            display: none;
+        }
+
+    }
