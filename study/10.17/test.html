@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // alert("hello world!"); 경고
+    // confirm("확인하시겠습니까?"); 확인, 취소
+    // prompt("입력하세요", 10); 입력받는 애들
+        
+        console.log("dhkgkgkgk") // 개발자도구 콘솔에 표현되는 애들
+        document.write("테스트입니다") // 브라우저에서 실제로 나오는 애들
+
+        var str = "test"; // 변수 선언
+        console.log (str); //문자형
+
+        var str2 = "i" + " am " + str //문자열합산이 가능
+        console.log (str2);
+
+        var num = 100;
+        console.log (num); /* 숫자형 */
+        // 숫자형 사칙연산시 하나라도 문자형이 있을경우 문자열 합산으로 값이 나옴!
+        console.log ("ㅎㅇㅎㅇ\n \tㅎㅇㅎㅇ")
+        /* 쌍따옴표 하고 싶은경우, 큰 따옴표 안에 작은따옴표, 작은따옴표 안에 큰 따옴표 넣는 형식으로 사용할 수 있음 
+        '\\' 역슬래시 해서 안에 넣어도 가능하다. */
+
+        var flag = true;
+        console.log(flag) /* boolean형 */
+
+
+
+        /* 변수를 쓰고, 담고, 어떻게 적용하는지에 대해 알아야 함 */
+
+        var num = 2;
+        var num2 = 9;
+        console.log (num+num2);
+        console.log (num-num2);
+        console.log (num*num2);
+        console.log (num/num2);
+        console.log (num%num2); /* 나머지 */
+
+        var sum = num+num2;
+        console.log (sum);
+
+        //boolean : 연산자를 통해 크기나 같음 여부를 나타냄
+        var flag = 10 == 2;
+        console.log (flag);
+
+		// var a = 10;
+		// var b = 20;
+		// var c = 10;
+		// var f = "20";
+		// var result = b == f;
+        // var result2 = b === f; //선언된 식별자의 자료형까지도 함께 비교함 (문자열 vs 숫자열!)
+        // console.log (result);
+        // console.log (result2)
+
+        
+        var a; //초기값을 안 줌, undefined.
+        var b = null;
+
+            console.log(a);
+            console.log(b);
+
+            /* undefined는 그냥 값이 없는거고, null은 null이라는 값으로 대체되어 있는거임. */
+
+        // undefined, null, 0을 제외한 모든 것은 'true'
+        console.log(Boolean(a));
+        console.log(Boolean(b));
+        console.log(Boolean(""));
+        console.log(Boolean("b"));
+
+        var flag1 = true, flag2 = false;
+        console.log (flag1 && flag2); // and
+        console.log (flag1 || flag2); // or
+        console.log (!flag1); // not
+
+        console.log(typeof(flag1)); //자료형 검사
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -19,7 +19,7 @@ a{
 }
 
 .wrap{
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -47,15 +47,15 @@ a{
 }
 
 .submitbutton{
+    margin-top: 10px;
     text-align: right;
 }
 
 .submitbutton a{
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
     min-width: 80px;
-    padding: 20px;
+    padding: 10px;
     margin-left: 10px;
     border: 1px solid black;
     font-size: 1.3rem;
