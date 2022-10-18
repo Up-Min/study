@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* if : 만약에... */
+
+        // if(273 > 100){
+        //     alert(`true입니다`);
+        // } //가로안에 있는 조건문이 true일 때 안에 있는 코드를 실행 함.
+
+        const date = new Date(); // 날짜, 시간 객체
+        const hour = date.getHours(); // 현재 시간 구하기
+            console.log(hour);
+
+            if(hour >= 6 && hour < 12){
+                alert ('오전입니다.');
+            } else if (hour >=12 && hour<=18){
+                alert('오후입니다.');
+            } else {
+                alert('저녁입니다.');
+            } // T,F를 판단할 수 있는 식을 넣자
+
+            // &&(and, 두개 다 true 면 true)
+            // ||(or, 둘 중 하나만 true 면 true)
+
+
+
+    </script>
+</body>
+</html>

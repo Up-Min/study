@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 1;
+        console.log (num);
+
+        num = 5; /* 이렇게 해도 됨. */
+        console.log (num); /* 이렇게 해도 값이 찍힘 */
+        
+        const num2 = 2; //상수만 쓸 수 있음.
+        // num2 = 5; //바로 에러 뜸
+        
+        let num3 = 5; //값 재할당 가능
+        /* 동일 변수 이중선언이 가능한 var과 다르게 중복이 되지 않음.
+        개발 환경 가운데 헷갈릴 일이 없어짐 */
+        num3 = 3;
+        console.log (num3);
+
+    </script>
+</body>
+</html>

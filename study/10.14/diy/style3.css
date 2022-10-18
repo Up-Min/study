@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+*{
+    border: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a.on{
+    background-color: black;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+ul li {
+    list-style: none;
+}
+
+.wrap{
+    width: 1000px;
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+.board{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black; 
+    border-collapse: collapse;
+    font-size: 1.7rem;
+}
+
+.board caption{
+    padding: 15px;
+}
+
+th, td{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.writebutton{
+    margin-top: 10px;
+    text-align: right;
+}
+.write{
+    display: inline-block;
+    border: 1px solid black;
+    min-width: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.listpage{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.listpage a{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.listpage a:hover{
+    background-color: black;
+    color: white;
+}
+
+@media all and (max-width : 1000px){
+    .wrap{
+        width: 95vw;
+    }
+}
+
+@media all and (max-width : 767px){
+    .wrap{
+        width: 95vw;
+    }
+    .board th:nth-of-type(4),
+    .board th:nth-of-type(5){
+        display: none;
+    }
+    .board td:nth-of-type(4),
+    .board td:nth-of-type(5){
+        display: none;
+    }
+
+}
+
+

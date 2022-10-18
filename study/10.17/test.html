@@ -69,15 +69,16 @@
             /* undefined는 그냥 값이 없는거고, null은 null이라는 값으로 대체되어 있는거임. */
 
         // undefined, null, 0을 제외한 모든 것은 'true'
-        console.log(Boolean(a));
-        console.log(Boolean(b));
-        console.log(Boolean(""));
-        console.log(Boolean("b"));
+        console.log(Boolean(a)); //false
+        console.log(Boolean(b)); //false
+        console.log(Boolean("")); //false
+        console.log(Boolean("b")); //true
 
         var flag1 = true, flag2 = false;
         console.log (flag1 && flag2); // and
         console.log (flag1 || flag2); // or
         console.log (!flag1); // not
+
 
         console.log(typeof(flag1)); //자료형 검사
 

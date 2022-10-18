@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = prompt("아무 숫자나 입력하시오.", 0);
+        console.log(str);
+        //prompt에서 입력받는건 모두 문자형임. 
+        //그래서 문자열을 강제 형변환 시켜줘야함.
+
+        var sum = 12 + Number(str); // 문자열을 숫자로 바꿔주는 형변환
+        var sum1 = 12 + parseInt(str); // 문자열을 숫자로 바꿔주는 형변환
+
+        console.log(sum);
+        console.log(sum1);
+
+        var sum = 1200 + String(sum); // 숫자를 문자열로 바꿔주는 형변환
+        console.log(sum);
+
+        console.log(Boolean(sum)); //boolean 형태로 바꿔주는 형변환
+
+
+    </script>
+</body>
+</html>

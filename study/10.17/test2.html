@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a=10, b=12;
+        let sum = 0;
+
+        // 복합 대입 연산자
+
+        console.log(sum+=a);
+        sum = 0;
+        console.log(sum-=a);
+        sum = 0;
+        console.log(sum*=a);
+        sum = 0;
+        console.log(sum/=a);
+        sum = 0;
+        console.log(sum%=a);
+
+        let list = '';
+        list += '<ul>'
+        list += '<li>hello</li>'
+        list += '<li>world!</li>'
+        list += '<ul>'
+
+        document.write(list);
+
+            let num = 10;
+            num = num++; //11이 아닌, 10 그대로가 나옴. 선 대입
+            console.log(num);
+            num = ++num; //선증가 후 대입. 11이 나온다.
+            console.log(num);
+            --num;
+            console.log(num);
+            num--;
+            console.log(num);
+            // 전위연산자, 후위연산자 차이 알아야함.
+             // 증가 후 대입 vs 대입 후 증가
+
+
+    </script>
+</body>
+</html>
