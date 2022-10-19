@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 함수 정의 (1) - 비익명 함수
+        // // function sum(a,b) // 매개변수 a,b 지정
+        // // {
+        // //     let sum = a + b; //함수안에 매개변수 a,b 사용 대입.
+        // //     console.log(sum);
+        // // }
+        // sum(); // 함수 실행
+        // // sum(); // 함수 실행
+        // // sum(); // 함수 실행
+        // // // 3번 하면 함수 3번 실행 됨.
+        // // 즉, 특정 행동을 반복하려고 할 때 하면 좋음.
+        
+        // // 함수 테스트
+        // // sum(5,7) // 5+7의 값인 12가 나옴.
+        // // sum(4234,423424) // yay
+
+        // // 함수 정의 (2) - 익명 함수
+        // const sum2 = function(a,b){
+        //     let sum = a + b;
+        //     console.log(sum);
+        // }
+        // sum2(4234,423424)
+
+        // // 함수 정의 (3) - 화살표 함수 (es6에서 업데이트)
+        // // const sum3 = (a,b) => {
+        // //     let sum = a + b;
+        // //     console.log(sum);
+        // // }
+        // // sum3(4234,423424)
+        
+        // const sum4 = a => {
+        //     let sum = a;
+        //     console.log(sum);
+        // } /* 매개변수가 하나만 있을 떄는 소괄호를 생략 가능함. */
+        // sum4(1)
+
+
+        // function sum(a,b)
+        // {
+        //     let sum = a + b; 
+        //     console.log(sum);
+        //     return (sum); // 값을 (특정변수에) 지정해준다.
+        //     console.log("안녕하세요"); // return 실행 되는 순간 아래에 있는 코드는 실행 안 됨.
+
+        // }
+        //     // 함수의 결과값을 특정에 지정하고 싶은 경우
+        // let result = sum(1,2)
+        // console.log(result); // 결과값 3이 나온다.
+
+        // // const sum3 = (a,b) => {
+        // //     let sum = a + b;
+        // //     console.log(sum);
+        // //      return (sum)
+        // // }
+        // const sum3 = (a,b) => a + b;
+        // // 중괄호를 날려주고 return문을 날려도 값이 나온다
+        // var result1 = sum3(4234,423424)
+        // console.log(result1);
+        
+
+            /* bmi 구하는 함수 3가지로 구해보기 */
+
+        function bmi(a,b){
+            let bmi = a/(b*b);
+            return (bmi);
+        }  
+
+        const bmi1 = function(a,b){
+            let bmi = a/(b*b);
+            return (bmi);
+        } 
+
+        const bmi2 = (a,b) => {
+            let bmi = a/(b*b);
+            return (bmi);
+        } // 어려워..
+        
+        let result1 = bmi(80,1.8); 
+        let result2 = bmi1(80,1.8); 
+        let result3 = bmi2(80,1.8);
+
+        console.log(result1);
+        console.log(result2);
+        console.log(result3);
+
+</script>
+</body>
+</html>

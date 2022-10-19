@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 변수를 선언합니다.
+      let output = "";
+
+      // 이중 for문 작성 // console 성공 버전
+      for (i=1; i<6; i++){
+        for (j=6; j>i; j--){
+          output += ' '  
+        }
+        for (j=0; j<2*i-1; j++){
+          output += '*'
+        }
+        output += '\n'
+      }
+      for (i=4; i>0; i--){
+        for (j=6; j>i; j--){
+          output += ' ' 
+        }
+        for (j=0; j<2*i-1; j++){
+          output += '*'
+        }
+        output += '\n' 
+      }
+
+      // 이중 for문 작성 // document 성공 버전
+      // for (i=1; i<6; i++){
+      //   for (j=6; j>i; j--){
+      //     output += '&nbsp;'  
+      //   }
+      //   for (j=0; j<2*i-1; j++){
+      //     output += '*'
+      //   }
+      //   output += '\n' + '<div>'
+      // }
+      // for (i=4; i>0; i--){
+      //   for (j=6; j>i; j--){
+      //     output += '&nbsp;'
+      //   }
+      //   for (j=0; j<2*i-1; j++){
+      //     output += '*'
+      //   }
+      //   output += '\n' + '<div>'
+      // }
+
+      // 출력합니다.
+      document.writeln(output);
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>

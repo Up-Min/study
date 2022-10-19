@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6. 다음 배열에서 숫자 5를 제거하는 코드를 작성하시오. -->
+    <script>
+        var arr = [2, 5, 9, 6];
+        var ans = [];
+
+        //splice를 사용한 방법
+
+        for (i=0; i<arr.length; i++){ 
+            //2 
+            if(arr[i] == 5){
+                arr.splice(i,1);
+            } //5 -> x
+        } //9 6
+        console.log(arr);
+        // 2 9 6
+
+        //console.log(arr.includes(5));
+
+        // includes를 사용한 방법
+            // for(i=0; i<arr.length ; i++){
+            //     if(arr.includes(5)){
+            //     arr[i] = 0;
+            // } 
+            // // 문제점 : for문을 돌리면서 arr[0]을 확인할때도 arr에 5가 있기 때문에, 2로 나와야 하는 결과값이 0이 나옴.
+            // // i를 1로 바꾸기 : 답은 나오나 변수가 바뀔경우 문제가 생김 ex) arr[0] = 5인 경우.
+            // //
+            // }
+            // for(i=0; i<arr.length; i++){
+            //     if(arr[i] != 0){
+            //         ans.push(arr[i]);
+            //     }
+            // }
+            // console.log(arr); //2,0,9,6? 
+            // console.log(ans);
+    </script>
+</body>
+</html>
