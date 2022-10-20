@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function callThreetimes(callback){
+            for(let i =1; i<4; i++){
+                callback(i)
+            }
+        }
+
+        // function print(i){
+        //     console.log(`${i}번째 함수 호출`)
+        // }
+
+        callThreetimes(function(i){console.log(`${i}번째 함수 호출`)});
+        //이것처럼 매개변수에 함수를 통으로 넣어줄수도 있음
+        
+        
+        // 그동안 매개변수에 단순 숫자만 넣었다면, 함수를 넣을수가 있어짐
+        // 매개변수에 함수를 주고, 그 함수를 이용해 반복 시키는 것. 이것이 콜백함수
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate (a,b){
+            let i = 1;
+            let sum = 0;
+            if(a>b){
+                for(let j=0 ; a>j ; j++){
+                    sum += b+j;
+                }
+                return sum;
+            }else if (a<b){
+                for(let j=0 ; b>j ; j++){
+                    sum += a+j;
+                }
+                return sum;
+            }
+        }
+        let check = calculate(1,4);
+        console.log(check);
+    </script>
+</body>
+</html>

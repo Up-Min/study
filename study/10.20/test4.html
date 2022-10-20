@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(function()){
+
+        // }
+
+        // setTimeout(()=>{
+        //     console.log(`2초후에 실행됩니다`)
+        // },2000)
+
+        // let cnt = 0;
+        // let id = setInterval(()=> {
+        //     console.log(`2초 마다 실행됩니다 ${cnt}`);
+        //     cnt++
+        // },2000)
+
+
+        // setTimeout(() => {
+        //    console.log(`타이머 종료`);
+        //    clearInterval(id) //clearinterval에 의해 setinterval 완전히 종료됨. 
+        // }, 5000);
+
+        setTimeout(() => {
+            console.log(`2초뒤 시작`);
+        }, 2000);
+
+        let reps = 0;
+        let repeat = setInterval(() => {
+            console.log(`1초마다 반복 ${reps}`);
+            reps++;
+  
+            if(reps == 5){
+                console.log(`${reps}회차이므로 종료`);
+                clearInterval(repeat)    
+            }
+        }, 1000);
+
+            
+        
+    </script>
+</body>
+</html>

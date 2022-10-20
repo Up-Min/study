@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str = [];
+        // let newstr = [];
+        // function calculate (str){
+        //     console.log(str);
+        //     for (let i = 0; i < str.length; i++){
+        //         if(str[i] < str[i+1]){
+        //             let item = str.splice(str[i],1);
+        //             str.splice(i+1,0,item[0]); 
+        //         }else
+        //         {
+        //             let item = str.splice(str[i+1],1);
+        //             str.splice(i,0,item[0]);
+        //         }
+        //     //    console.log(newstr); 
+        //     }
+        //     return str;
+        // }
+
+        let answer = calculate([4,31,2,3,4,2,1]);
+        console.log(answer);
+
+        function min(array) {
+            let output = array[0];
+            for (const item of array) { //for of : 값을 하나씩 하나씩 뽑아옴.
+                if (output > item){
+                    output = item;
+                }
+            }
+            return output;
+        }
+        const testArr = [535,534522,23,42,1231];
+        console.log(`최솟값 : ${min(testArr)}`);
+
+            /* rest 이용하여 최소값 구해내는 방법  */
+
+        //     function min(first, ...rests) {
+        //     let output; 
+        //     let items;
+        //         // 받는 매개변수가 숫자형인지 배열인지 판단을 해줘야함. 그거에따라 달라지므로.
+        //         if(Array.isArray(first)){ //배열이면 true, 아니면 false
+        //             output = first[0];
+        //             items = first;
+        //         } else if (typeof(first) == 'number') {
+        //             output = first; // 숫자배열의 '52' 대응
+        //             items = rests; // 52 제외한 나머지 숫자 대응 (어차피 나머지는 배열이니까)
+        //         }//숫자형인지 여부 확인
+
+        //     for (const item of items) { 
+        //         if (output > item){
+        //             output = item;
+        //         }
+        //     }
+        //     return output;
+        // }
+        // testArr = [535,534522,23,42,1231];
+        // console.log(`최솟값(숫자) : ${min(535,534522,23,42,1231)}`);
+        // console.log(`최솟값(배열) : ${min(testArr)}`);
+
+
+    </script>
+</body>
+</html>

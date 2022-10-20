@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+    // 비익명 함수는 호이스팅이 되지만, 익명함수는 호이스팅이 안됨.
+      // 위에서부터 순서대로 코딩을 시키는 자바스크립트와 달리, 호이스팅을 사용하면 
+      // 변수를 정의하지 않고 함수를 돌려도 작동이 가능하다 (호이스팅)
+      //
+
+      // function a() {
+      //   document.write("haha");
+      // } 
+
+      // a();
+
+      b();
+        // b사용하기 전에 선언을 해야하는데, 선언이 밑에 있어서 적용이 안됨.
+      const b = function () {
+        document.write("baba");
+      };
+    </script>
+  </body>
+</html>

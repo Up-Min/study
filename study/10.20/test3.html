@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //forEach()
+       // const numbers = [273,52,103,32,57]
+        // numbers.forEach(function (value, index, array) {
+        //     // console.log(`${array}`);
+        //     console.log(`${index}번째 : ${value} `);
+        // });
+        // forEach = 배열의 value, index를 가져와주면 numbers에 있는 배열을 가져와 뽑아낼 수 있음.
+        // for문과 동일하게 움직이는 느낌임.
+
+        // const numbers = [273,52,103,32,57]
+
+        // let result = numbers.map(function(value, index, array){
+        //     console.log(`${index}번째 : ${value} `);
+        //     return value*value;
+        // }) 
+        // map : 리턴을 해서 새로운 배열을 만들 수 있음.
+        // 데이터들을 다 묶어서 배열로 만들어 주는 느낌. 
+
+        const numbers = [273,52,103,32,57]
+
+        function min(a) {
+            let i;
+            for(i = 0 ; i<a.length ; i++){
+                if(a[i]<a[i+1]){
+                    a[i] = a[i+1];
+                }
+            }
+            return a[0];
+        }
+
+        let result = numbers.map(function(value){
+            return  min(numbers) // min function에 number 적용
+        }) 
+        console.log(result);
+
+        let result1 = numbers.map(function(value){
+            return value 
+        }) 
+        console.log(min(result1)); //value 산출한 값을 리턴받아 min function에 적용
+
+        let result2 = numbers.map(function(value){
+            return min(value)
+        }) 
+        console.log((result2)); // min()에 value 적용 : undefined
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+        //filter
+        // const numbers = [0, 273,52,103,32,57]
+        
+        // const evennumbers = numbers.filter(function(value){
+        //     return value % 2 !== 0 
+        // }) /* 조건을 걸어서 걸러주는 역할을 하는 filter */
+        // // 단순히 데이터만 보내주는게 아니라, 조건이 참일때 값을 보낼 수 있음.
+        //     // return값이 참일때만 해당 데이터를 모아준다.
+        // console.log(`결과 : ${evennumbers}`);
+
+        // const numbers = [0, 273,52,103,32,57]
+        
+        // let min = Math.min
+
+        // const evennumbers = numbers.filter(function(value){
+        //     return value > 50 && value%2 == 0 
+        // }) //filter 자체가 'if'의 역할을 함
+        // console.log(`결과 : ${evennumbers}`);
+
+
+
+    </script>
+</body>
+</html>

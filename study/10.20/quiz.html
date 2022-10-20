@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script> /* 윤년 체크하는 함수 */
+        function checkdate (year) {
+            let result;
+           if (year%4==0 && year%100!==0){
+            result = '윤년';
+           }else if (year%400==0){
+            result = '윤년';
+           }
+           else{
+           result = '윤년 아님';
+           }
+           return result;
+        }
+
+        let check = checkdate (2011);
+        console.log(check);
+
+    </script>
+</body>
+</html>
