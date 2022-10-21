@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 2. 객체 생성자 방식
+        // 객체 : 속성, 메소드
+        function Pet(namevalue,age,div,food) //객체를 만드는 함수이기 떄문에 이름을 대문자로 시작함
+        {   
+            // 속성 만들기
+            this.name = namevalue
+            // this? 현재 객체를 의미함. 
+            // 즉, Pet라는 객체 안에 있는 name이다를 의미함.
+
+            this.age = age // new pet 옆에 새로 들어오는 값을 age로 받음
+            this.food = food 
+            this.div = div
+
+            // 메소드 만들기
+            this.eat = function(food) {
+                // console.log(`${this.age}살 ${this.name}이 ${food} 먹는다`);
+                return food;
+            }
+            this.age1 = function(age){
+                console.log(`${this.name}의 나이는 ${this.age} 살입니다.`);
+            }
+            this.div1 = function (div) {
+                console.log(`${this.name} 의 종은 ${this.div}, 나이는 ${this.age} 입니다. 좋아하는 음식은 ${this.food}입니다.`);
+            }
+        }
+        //객체 생성
+        /* 왜 객체를 쓰는가? 코드의 생산성을 높이기 위하여.
+        여러개의 변수를 만들고 객체를 사용하면 생산성이 높아진다? */
+         /* 변수의 종류가 많을때, 그때마다 일일이 함수를 만들 수 없으니 
+        거기서 이름만 변경해서 사용할 수 있도록 하기 위해 객체를 선언함*/
+        
+        // const pet = new Pet(); // 변수 만들고 new+객체명 선언
+
+        const pet = new Pet("구름", 5, 1,'빵');
+        const pet2 = new Pet("별", 10, 2,'계란'); // this.name 에 '별'이 할당 됨.
+        const pet3 = new Pet("달", 7, 3,'생선');
+        const pet4 = new Pet("해", 9, 4,'밥');
+        /* 객체가 생성 될 때 어떤 일이 벌어지는가? 
+        ☆ 속성에 값이 할당된다 ☆       
+
+        pet, pet2, pet3, pet4라는 4개의 방이 생성 됨. 
+         */
+        
+        /* pet2기준, 이미 this.name에 "별" 이라는 이름이 저장되어있는
+        상태에서 eat함수에 `밥`이라는 값이 들어가므로
+        "별이 밥 먹는다" 라는 결과값이 나옴. */
+
+
+        pet.div1('빵');
+
+        // pet2.div1();
+        // pet3.div1();
+        // pet4.div1();
+
+
+
+
+
+
+    </script>
+</body>
+</html>

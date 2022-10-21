@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    Number('33')
+    const f = new Number(273.4234243211) // 숫자를 쓰기 위해 쓰는 객체.
+    console.log(f.toFixed(2)); //소숫점 2자리까지 남기고 자름
+    const d = new Date()
+    console.log(d); //현재 날짜. '5'라고 나옴. 
+    console.log(d.getDay()); //현재 날짜. '5'라고 나옴. (일],월.화.수.목.금,토)
+    console.log(d.getHours());
+    console.log(d.getFullYear());
+
+    const s = new String("안녕하세요")
+    console.log(s);
+
+    const b = new Boolean(false)
+        console.log(b);
+
+        let num = 1.111111111111111 
+    
+        console.log(num.toFixed(2)); // 레퍼런스에 있는대로 숫자 함수를 바로 사용할 수 있다.
+
+        // for (let i=0 ; i<str.length; i++){
+        //     console.log(str[i]);
+        // }
+        let str = "The,orange,test,WWW" // 자료도 객체화 되어있고, 배열로 할 수 있다.
+        let str1 = "Hello."
+        let str2 = "apple dog goood"
+
+        // const word = str.split(' ') // 단어를 잘라서 배열형태로 만들어줌. (빈칸 한 칸)
+        // const word = str.split() //통째로 배열형태로 만들어줌. (빈칸 x)
+        // const word = str.split('') //하나씩 배열형태로 만들어줌. ('')
+        // const word = str.split(','); //하나씩 끊어줌. ('')
+        // const word = str.trim(); //공백을 없애줌. ('')
+        // const word = str1.concat(' ', str) // 두개의 다른 str을 합쳐줌.
+       // const word = str2.slice(1,3) //index [1~3까지 잘라줌]
+        // const word = str2.indexOf('cat'); // 해당 문자열이 있는 index값을 반환해줌.
+
+        //     if(word === -1){
+        //         alert('찾는 문자가 없습니다')
+        //     } // index of 결과로 반환되는 값이 없을 경우 alert를 띄울수도 있음.
+
+        // const word = str2.substring(1,3) 
+        // const word = str2.toLocaleUpperCase()    // 대문자 변환
+        // const word = str2.toLocalelowerCase()    // 소문자 변환
+            
+        // 결국 배열형태로 return함.
+        
+       // console.log(word);
+
+
+            let arr = [3,6,3,0,2,1,2,3,441,5,111,18,9,10]
+            const cal = Math.min(...arr)
+            console.log(cal);
+
+        // !!!!!!!!!!!!!!!!!!!!! 결국 뭐다? 레퍼런스 사이트를 어떻게 쓰는지 방법을 알아야한다 !!!!!!!!!!!!!!!!!!!!!!
+
+    </script>
+</body>
+</html>

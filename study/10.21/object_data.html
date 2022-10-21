@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자료를 다루는 방법 : 배열, 객체 데이터(JSON)
+        
+        // 객체 데이터
+        const product={
+            name: `건조망고`,
+            type: `당절임`,
+            weight: 3,
+            arr: [1,2,3,4]
+
+        }   // object로 인식 됨. name (key) : `건조망고` (value)
+            // 배열자체가 객체 데이터에 들어갈 수도 있음.
+            
+            // 데이터 보기   
+            // console.log(product);
+            // console.log(product.type); //객체데이터에서 type에 해당하는 데이터를 꺼내 볼 수 있음.
+
+            //데이터 바꾸기
+            // product.name = `바나나` //객체데이터의 name에 해당하는 데이터를 바꿀 수 있음.
+            // console.log(product.name); // 건조망고 -> 바나나
+
+            // 배열 데이터 꺼내오기
+            // const result = product.arr;
+            // console.log(`result = ${result}`); 
+            // console.log(result[1]);//arr의 2번째 애를 가져오고 싶은 경우
+
+            //데이터를 넣고 싶을 때
+            product.date = '2022.10.21'
+            console.log(product);
+
+            //데이터를 삭제하고 싶을 때
+            delete product.weight;
+            console.log(product);
+
+        
+    </script>
+</body>
+</html>

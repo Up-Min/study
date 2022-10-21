@@ -28,22 +28,35 @@
         //    clearInterval(id) //clearinterval에 의해 setinterval 완전히 종료됨. 
         // }, 5000);
 
-        setTimeout(() => {
-            console.log(`2초뒤 시작`);
-        }, 2000);
+        // setTimeout(() => {
+        //     console.log(`2초뒤 시작`);
+        // }, 2000);
 
-        let reps = 0;
-        let repeat = setInterval(() => {
-            console.log(`1초마다 반복 ${reps}`);
-            reps++;
+        // let reps = 0;
+        // let repeat = setInterval(() => {
+        //     console.log(`1초마다 반복 ${reps}`);
+        //     reps++;
   
-            if(reps == 5){
-                console.log(`${reps}회차이므로 종료`);
-                clearInterval(repeat)    
+        //     if(reps == 5){
+        //         console.log(`${reps}회차이므로 종료`);
+        //         clearInterval(repeat)    
+        //     }
+        // }, 1000);
+
+        let reps1 = 1;
+        let repeat_start = setTimeout(()=>{
+            console.log('시작');
+        }, 0000);
+        let repeat_end = setInterval(() => {
+            console.log(`${reps1}번째 반복중.`);
+            reps1 ++;
+            if(reps1 == 10){
+                console.log(`${reps1}번째 종료`);
+                clearInterval(repeat_end);
             }
         }, 1000);
-
-            
+        console.log(clearInterval);
+        
         
     </script>
 </body>

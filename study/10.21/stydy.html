@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 2개의 값을 받아서 덧셈하는 객체
+
+        function Calculate(numVal1,numVal2) {
+            this.num1 = numVal1;
+            this.num2 = numVal2;
+            this.sum = function () {
+                console.log(`주어진 2개의 값의 합 ${(this.num1+this.num2)}`);
+            }
+        }
+        let cal = new Calculate(1,3);
+        cal.sum()
+
+        // 입력받은 배열을 string으로 바꾸고, 그 중 '6'이 나오는 위치를 출력하는 객체
+
+        function Change(array) {
+            this.arr = array;
+            console.log(this.arr);
+            this.ans = function(){
+                let ans1 = JSON.stringify(this.arr);
+                console.log(ans1);
+                console.log(ans1.indexOf('6'));
+            }
+        }
+        let str = prompt(`입력할 값을 적으세요`, 0)
+        let ar = str.split('')
+        let change = new Change(ar)
+        change.ans()
+
+
+
+
+
+    </script>
+</body>
+</html>
