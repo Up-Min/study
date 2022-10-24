@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="txt" id="txt_hi">안녕하세요우</h1>
+    <h1 class="txt">안녕하세요우</h1>
+    <h1 class="txt">안녕하세요우</h1>
+    <h1 class="txt">안녕하세요우</h1>
+
+    <script>
+        /*
+        // 태그 선택자, 클래스 선택자, 아이디 선택자 등등 
+        // document.querySelector('선택자') -> 해당 요소를 가져온다.
+        const header = document.querySelector('.txt');
+        console.log(header);
+        
+        //js에서는 css속성을 사용할 때 케밥 '-' 형태가 아니라 카멜표기법으로 'backColor' 써야한다
+        //요소.style.css속성(카멜) = css 속성값
+        header.style.color = 'red' // 속성값은 문자형으로
+        header.style.backgroundColor = 'black' 
+        header.style.padding = '20px' */
+
+        // document.querySelectorAll('선택자') -> 해당 요소를 모두 가져온다.
+        // const headers = document.querySelectorAll('.txt')
+        // console.log(headers); //배열형태로 찍힘.
+
+        // // 방법 1
+        // for (let i = 0 ; i< headers.length; i++){
+        //     headers[i].style.color = 'red'
+        //     headers[i].style.backgroundColor = 'black'
+        //     console.log(headers[i]); 
+        // } 
+        //배열을 한개한개 따로따로 불러옴/ style을 따로따로 지정함.
+        // // 방법 2
+        // for( header of headers){
+        //     headers.style.color = 'blue'
+        //     headers.style.backgroundColor = 'black'
+        // }
+        // // 방법 3
+        // headers.forEach(function(header) {
+        //     headers.style.color = 'red'
+        //     headers.style.backgroundColor = 'black'
+        // })
+
+        // 그러면, 얘를 가지고 뭐할건데?
+
+            const headers = document.querySelectorAll('.txt')
+            for (let i=0 ; i<headers.length ; i++){
+                headers[i].style.color = 'blue'
+                headers[i].style.backgroundColor = 'Yellow'
+                console.log(headers[i]);
+            }
+
+    </script>
+</body>
+</html>

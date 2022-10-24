@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <!-- select의 값에 따라 바뀌는 p태그 -->
+    <select>
+        <option> 떡볶이 </option>
+        <option> 순대 </option>
+        <option> 튀김 </option>
+        <option> 오뎅 </option>
+    </select>
+    <p>선택 : 떡볶이</p>
+
+    <script>
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+
+        select.addEventListener('change',function(e){
+            console.log(e);
+            //selec박스의 옵션을 다가져온다.
+            const option = e.currentTarget.options
+            console.log(option);
+
+            const index = e.currentTarget.options.selectedIndex
+            console.log(index);
+
+                p.textContent = `선택 : ${option[index].textContent}` 
+                //.textContent를 써서 요소 안에 있는 글자만 떼어올 수 있음.
+        })
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box">
+        첫번째 div 
+        <span class="inner">테스트입니다</span>
+        
+    </div>
+
+    <script>
+        // const header = document.createElement('h1');
+        // // 요소를 생성하는 createElement(생성하고 싶은 태그명) : 해당요소를 생성
+
+        // console.log(header);
+
+        // document.body.appendChild(header) 
+        // //생성한 h1을 body안에 넣겠다 선언하는 appendChild (body에 child 요소로!)
+
+        // const box = document.querySelector('.box')
+        // const spanTag = document.querySelector('span')
+
+        // // body가 아닌 box에 header을 넣고 싶은 경우, 일단 select를 먼저 하고
+        // box.appendChild(header) 
+        // box.removeChild(spanTag)
+
+        // // 그 다음에 append태그로 header을 집어 넣는다
+
+        const header = document.createElement('h1')
+        document.body.appendChild(header)
+
+        const box = document.querySelector('.box')
+        const spanTag = document.querySelector('span')
+
+        box.appendChild(header)
+        box.removeChild(spanTag)
+
+        // 태그의 계층구조
+        // 부모태그, 형제태그 접근
+
+    </script>
+
+
+
+</body>
+</html>

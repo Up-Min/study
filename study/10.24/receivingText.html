@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <!-- 인치 변환 계산기 만들기 -->
+    <input type="text">inch <br>
+    <button>계산</button>
+    <h1> </h1>
+    <script>
+        // 계산버튼이 클릭할 때 값이 변환되게 해야한다.
+            const input = document.querySelector('input') //입력값 가져오기
+            const calButton = document.querySelector('button') //계산버튼 가져오기
+            const h1 = document.querySelector('h1')
+
+            calButton.addEventListener('click',function(){ //이벤트 활성화
+               
+                const inch = Number(input.value) // input에서 입력받은 값 가져오기
+               
+                //check number or string?
+                if(isNaN(inch)) { // isNAN : NAN값이 나온다면 = 숫자가 아닌 값이 나온다면
+                    h1.textContent = `숫자가 아닌걸 입력했음`
+                    return // 숫자가 아니면 더이상 진행시키지 않겠다는 뜻 
+                }
+
+                const cm = inch * 2.54; // 변환
+                h1.textContent = `${cm} cm`
+            })
+    </script>
+</body>
+</html>

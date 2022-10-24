@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            user-select:none;
+            /* 클릭을 여러번 했을 때 글자가 선택되는 걸 방지 */
+        }
+
+        h1:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- event -->
+    <h1> 클릭횟수 : 0 </h1>
+    
+    <script>
+        let counter = 0
+        const h1 = document.querySelector ('h1')
+        //addEventListener('이벤트명,', 함수 - 매개변수를 함수로 주는 것! (콜백함수))
+        // h1.addEventListener('click',function(){
+        //     // 클릭했을 때 실행되기를 원하는 코드 작성
+        //     counter++
+        //     h1.textContent = `클릭횟수 : ${counter}`
+        //     //h1 자체가 `` 안에 있는 것들로 대체됨.
+        // })
+
+        //////////////////////////////////////////
+        
+        // 분리해서 쓰는 방법
+        const listener = function(){
+            counter++
+            h1.textContent = `클릭횟수 : ${counter}`
+        }
+
+        h1.addEventListener('click',listener)
+        
+        h1.removeEventListener('click',listener)
+        // 이벤트를 지워주는 아이. 함수가 실행이 안됨
+
+        ////////////////////////////////////////////////////
+
+        // h1.addEventListener('click',() => {}) /es6
+
+        // 이벤트를 사용할 수 있는 listener
+    </script>
+
+</body>
+</html>

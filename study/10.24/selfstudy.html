@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="radio" name="pet" id="고양이"> 고양이
+    <input type="radio" name="pet" id="강아지"> 강아지
+    <input type="radio" name="pet" id="원숭이"> 원숭이
+    <input type="radio" name="pet" id="카멜레온"> 카멜레온
+    <input type="radio" name="pet" id="카놀라유"> 카놀라유
+
+    <h1> </h1>
+
+    <hr>
+    <input type="checkbox">
+    <h2></h2>
+
+    <script>
+        const input = document.querySelectorAll('[name=pet]')
+        const h1 = document.querySelector('h1')
+
+        input.forEach(function(radio){
+            radio.addEventListener('change',function(e){
+                const index = e.currentTarget.id
+                h1.textContent = `가장 좋아하는 동물은 ${index}`
+            })
+        })
+
+        const box_Input = document.querySelector('[type=checkbox]')
+        const h1_Output = document.querySelector('h2')
+
+        box_Input.addEventListener('click',function(e){
+            if(e.currentTarget.checked){
+                h1_Output.textContent = `체크박스 켜짐`
+            } else{
+                h1_Output.textContent = `체크박스 꺼짐`
+            }
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>

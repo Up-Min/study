@@ -10,18 +10,30 @@
     <script>
         // 무작위로 입력받은 배열의 마지막 항의 최솟값을 구하는 방법
          // (a,b,c,d,e) 가 주어질 경우. e는 a+b+c+d가 된다. 이때, e가 최솟값이 되는 case를 구하여라
+            // 입력받은 배열을 순서대로 배열하고, 마지막 항 전까지 덧셈 한 값을 보낸다.
 
         function Calculate(numVal){
-            this.arr = numVal;
-            this.cal = function(){
-                let a = sort.this.arr;
-                console.log(a);
+            this.arr = numVal.sort();
+            this.cal = function(numVal){
+                let sum = 0;
+                console.log(`정렬된 값 ${this.arr}`);
+                for (let i = 0; i<this.arr.length; i++){
+                    sum += this.arr[i];
+                }
+                console.log(`최소값 ${sum}`);
             } 
         }
 
-        const number = prompt ('숫자를 입력하세요',0)
-        let arrange = number.sort;
-        console.log(arrange);
+        let number = Number((prompt ('숫자를 입력하세요',0)));
+        let arr = Number([])
+        for (let i = 0; i<number.length; i++){
+            arr[i] = number[i];
+        }
+        console.log((arr));
+
+        const func = new Calculate(arr);
+
+        func.cal(arr)
         
     </script>
 </body>

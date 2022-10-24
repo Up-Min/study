@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <!-- radio의 값을 받는 p태그 -->
+
+    <h1>★ 좋아하는 동물 선택 ★</h1>
+        <input type="radio" name="pet" value="강아지">
+        <span>강아지</span>
+        <input type="radio" name="pet" value="고양이">
+        <span>고양이</span>
+        <input type="radio" name="pet" value="햄스터">
+        <span>햄스터</span>
+        <input type="radio" name="pet" value="기타">
+        <span>기타</span>
+
+        <hr>
+        <h3 id="output"> </h3>
+
+        <hr>
+        <input type="checkbox">
+        <h2 class="chk_output"> </h2>
+
+    <script>
+        // 1. radio event
+        const output = document.querySelector('#output')
+        const radios = document.querySelectorAll('[name=pet]')   
+            // 4개를 한번에 선택해줘야 하기 때문에 ALL을 쓴다!
+        
+        // 클릭을 했을 때 뭔가가 떴으면 좋겠다! -> radio 버튼에 event를 걸어야 한다.
+        // 근데 radio가 값이 여러개이기 때문에 for문을 써서 (배열로 값이 들어오기 때문에) 지정을 해준다
+
+        radios.forEach(function(radio){ // radio에 대응하는 for문 실행
+            radio.addEventListener('change',function(e){ //event 받아올 변수 지정. (각각의 radio 값이 변했을 때 대응하는!)
+                const current = e.currentTarget
+                if(current.checked){ //체크 여부 
+                    output.textContent = `좋아하는 동물은 ★${current.value}★`                    
+                }
+            })
+        })
+
+        // 2. checkbox event
+        const box = document.querySelector('[type=checkbox]')
+        const chk_Out = document.querySelector('.chk_output')
+
+        box.addEventListener('change',function(e){
+            if (e.currentTarget.checked){
+                chk_Out.textContent = `체크됨`
+            } else{
+                chk_Out.textContent = `미체크됨`
+
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

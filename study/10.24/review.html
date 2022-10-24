@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+    
+    <script>
+
+        let inputValue ;
+        let unitValue = 10;
+
+        const input = document.querySelector('input')
+        const output = document.querySelector('span')
+        const select = document.querySelector('select')
+
+        function calculate() {
+            output.textContent = (inputValue * unitValue).toFixed(2)
+        }
+
+        input.addEventListener('keyup',function(e){
+            inputValue = e.currentTarget.value
+            calculate() 
+        })
+
+        select.addEventListener('change',function(e){
+            const option = e.currentTarget.options
+            const index = e.currentTarget.options.selectedIndex
+            unitValue = (option[index].value)
+            calculate()
+        })
+
+    </script>
+
+
+</body>
+</html>
