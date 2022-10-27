@@ -7,45 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-
-    <input type="radio" name="pet" id="고양이"> 고양이
-    <input type="radio" name="pet" id="강아지"> 강아지
-    <input type="radio" name="pet" id="원숭이"> 원숭이
-    <input type="radio" name="pet" id="카멜레온"> 카멜레온
-    <input type="radio" name="pet" id="카놀라유"> 카놀라유
-
-    <h1> </h1>
-
-    <hr>
-    <input type="checkbox">
-    <h2></h2>
-
+    <input type="text"> cm =
+    <span></span>
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+   
     <script>
-        const input = document.querySelectorAll('[name=pet]')
-        const h1 = document.querySelector('h1')
+        const inputVar = document.querySelector('input')
+        const spanVar = document.querySelector('span')
+        const selectVar = document.querySelector('select')
+        let returnValue;
+        let cmValue ;
+        let changeValue = 10;
 
-        input.forEach(function(radio){
-            radio.addEventListener('change',function(e){
-                const index = e.currentTarget.id
-                h1.textContent = `가장 좋아하는 동물은 ${index}`
+
+        function calculate(){
+            returnValue = (cmValue*changeValue).toFixed(2);
+            spanVar.textContent = `${returnValue}`
+        }
+
+            selectVar.addEventListener("change",function(e){
+                const option = e.currentTarget.options
+                console.log(option);
+
+                const optionIndex = e.currentTarget.options.selectedIndex
+                // 이거 e.currentTarget.options.selectedIndex 너무 헷갈림...
+                console.log(optionIndex);
+
+
+                changeValue = (option[optionIndex].value)
+                console.log(changeValue);
+
+                calculate()
             })
-        })
 
-        const box_Input = document.querySelector('[type=checkbox]')
-        const h1_Output = document.querySelector('h2')
+            inputVar.addEventListener("keyup",function(e){
+                cmValue = e.currentTarget.value
+                calculate()
+            })
 
-        box_Input.addEventListener('click',function(e){
-            if(e.currentTarget.checked){
-                h1_Output.textContent = `체크박스 켜짐`
-            } else{
-                h1_Output.textContent = `체크박스 꺼짐`
-            }
-        })
+
+        
 
 
     </script>
-
-
 
 </body>
 </html>

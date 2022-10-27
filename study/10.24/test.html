@@ -30,7 +30,11 @@
 
 
             select.addEventListener('change',function(e){
+                console.log(e);
+
                 const options = e.currentTarget.options
+                console.log(options);
+
                 const index = e.currentTarget.options.selectedIndex
                 transVal = (options[index].value)
                 calculate()

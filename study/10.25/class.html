@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function 으로 만들었던 객체를 class로 만든다.
+        // 동일하게 클래스에도, 속성과 메소드로 구성되어있음.
+        class Pet {
+            // 생성자 함수 constructor
+            constructor(nameVal, ageVal, catVal){
+                this.name = nameVal
+                this.age = ageVal
+                this.cat = catVal
+            }
+            // 메소드 (함수)
+            eat(food){
+                    console.log(`${this.name}이가 ${food}를 먹습니다.`);
+                }   
+
+            //나이출력
+            ageF(){
+                console.log(`${this.name}이의 나이는 ${this.age}살 입니다.`);
+            }
+
+            //종 출력
+            catF(){
+                console.log(`${this.name}이의 종은 ${this.cat}입니다.`);
+            }
+        
+        }
+        const pet = new Pet('구름',15,'페르시안')
+        const pet2 = new Pet('별',10,'러시안') 
+
+        // pet, pet2는 다른 객체라 생각하라.
+
+
+        console.log(pet.name);
+        console.log(pet.age);
+        console.log(pet.cat);
+
+        pet.eat('통조림')
+        pet.ageF()
+        pet.catF()
+        // 사용법은 동일하나, 정리하는 것이 다르다.
+
+        pet2.eat('통조림')
+        pet2.ageF()
+        pet2.catF()        
+        
+    </script>
+</body>
+</html>

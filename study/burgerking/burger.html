@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 초기화 태그 */
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{text-decoration: none !important;}
+        img{border: 0;} /* 이미지 선 생기는거 방지 */
+        ul{list-style: none;}
+        header,footer,section{box-sizing: border-box;} /* padding, border이 같이 사용될 수 있도록 묶음 */
+        
+        .wrap{
+            background-color: wheat;
+        }
+
+        /* 0~766px (모바일) */
+        .header__nav{
+            max-width: 1200px;
+            background-color: red;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+
+        } /* 메뉴, 로고등이 들어갈 박스들을 지정해줌. */
+
+        .header__nav > h1{
+            width: 100px; /* 이미지가 들어갈 부분이기때문에 px를 고정해놓고 쓰는 것이 좋음 */
+            height: 120px;            
+        }
+
+        .header__nav > nav{
+            width: calc(100%-100px); /* 전체에서 로고 크기만큼을 뺀 사이즈 */
+            background-color: orange;
+            height: 120px;
+        }
+
+        .header__nav > nav > ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; /* 공간을 균일하게 띄워둔다 */
+        }
+
+        .header__nav > .delivery-order{
+            width: 168px;        
+        }
+
+        section .con{
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+        }
+        
+        .slider {
+            height: 480px;
+        }
+
+        .slider__content{
+            background-color: green;
+        }
+
+        .youtube{
+            height: 605px;
+        }
+
+        .youtube__content{
+            background-color: blue;
+        }
+
+        .sns{
+            height: 160px;
+        }
+
+        .sns__content{
+            background-color: darkblue;
+        }
+
+        .sns__content > ul{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sns__content > ul > li{
+            flex: 1; /* 1:1:1 비율을 만든다? */
+            text-align: center;
+        }
+
+        .guide{
+            height: 480px;
+        }
+
+        .guide__content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide__content >div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .guide__content > .content__app {
+            background-color: blueviolet;
+        }
+
+        .guide__content > .content__delivery {
+            background-color: purple;
+        }
+
+        .store {
+            height: 597px;
+        }
+
+        .store__content {
+            background-color: crimson;
+        }
+
+        .store__content ul{
+            overflow: hidden;
+            width: 79.44%; /* 비율구하는 공식 : 1144 / 1400  */
+            margin: 0 auto;
+        }
+
+
+        .store__content ul li{
+            float: left; /* ★ float 할 때, 부모태그에 overflow:hidden 넣어야함 - 넘치지 말라고 */
+            width: 33.33%; /* float, 비율 조정해서 2행 3열 만듬. */
+            text-align: center;
+        }
+
+        .banner {
+            height: 200px;
+        }
+
+        .banner__content{
+            background-color: chartreuse;
+        }
+
+        .footer{
+            height: 680px;
+            background-color: darkolivegreen;
+        }
+        /* 767~1024px (태블릿) */
+        
+        @media all and (min-width :767px){
+            .guide__content{
+                flex-direction: row;
+            }
+            .store__content ul li{
+                width: 16.66%;
+            }
+        }
+
+        /* 1024px~ (pc) */
+        /*  매장찾기 애들 6개 한줄에 나오게 수정해야함  */
+        @media all and (min-width :1024px){
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header"> 
+        <div class="header__nav"> <!-- BEM표기법에 기반해서 부모태그 '__' 언더바 2개 자식 이름 -->
+            <h1>logo</h1>
+            <nav> 
+                <ul>
+                    <li> 메뉴소개 </li>
+                    <li> 매장소개 </li>
+                    <li> 이벤트 </li>
+                    <li> 브랜드스토리 </li>
+                </ul>
+            </nav>
+            <div class="delivery-order"> 딜리버리 주문 </div>
+        </div>
+    </header>
+    <main class="wrap"> 
+        <section class="slider">
+            <div class="slider__content con"> 
+
+            </div> <!-- 실제 컨텐츠가 들어가는 부분, section에 바로 들어가면 따로 관리하기가 힘듬. -->
+            <!-- 한번에 조정하기 편하게 하려고 depth를 한번더 함. -->
+        </section>
+        <section class="youtube">
+            <div class="youtube__content con"> </div> <!-- 연동성이 있는 이미지는 li로 하는것이 좋음 -->
+        </section>
+        <section class="sns">
+            <div class="sns__content con" > 
+                <ul class="content__list">
+                    <li>youtube</li>  
+                    <li>facebook</li> 
+                    <li>instagram</li> 
+                </ul>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="guide__content con"> 
+                <div class="content__app">app</div>
+                <div class="content__delivery">delivery</div>
+            </div>
+        </section>
+        <section class="store">
+            <div class="store__content con"> 
+                <div>매장찾기</div>
+                <ul>
+                    <li>딜리버리</li>
+                    <li>킹오더</li>
+                    <li>드라이브스루</li>
+                    <li>24시간</li>
+                    <li>아침메뉴</li>
+                    <li>주차공간</li>
+                </ul> <!-- 일단 태그로 기본 구성을 다 해두는 것을 추천함 -->
+            </div>
+        </section>
+        <section class="banner">
+            <div class="banner__content con"> </div>
+        </section>
+    </main>
+    <footer class="footer"> </footer>
+</body>
+</html>

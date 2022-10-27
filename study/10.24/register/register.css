@@ -75,6 +75,25 @@ body {
     width: 200px;
 }
 
+ #signup select[type=gender]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 210px;
+ }
+
+ input[name=birthYear], select[name=birthMonth], input[name=birthDay] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 55px;
+ }
+ select[name=birthMonth]{
+    margin-right: 5px;
+ }
+
 /* #signup input:not([type=radio]) {
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -97,4 +116,11 @@ body {
 #signup button:hover {
     background: #222;
     color: #fff;
+}
+
+#signup .alert_msg {
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+    padding-left: 110px;
 }

@@ -56,12 +56,42 @@
                     <input id="tel" name="tel" type="tel" maxlength="13" autocomplete="off">
                     <span class="alert_msg reg_tel"> 전화번호 형식이 일치하지 않습니다. </span>
                 </li>
+                <li>
+                    <label for="gender"> 성별 </label>
+                    <select name="gender" id="gender" type = "gender">
+                        <option value="man">남성</option>
+                        <option value="woman">여성</option>
+                        <option value="else">기타</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="birth"> 생년월일 </label>
+                            <input id="birthYear" name = "birthYear" type="birthYear" required autocomplete="off" >
+                            <select id="birthMonth" name="birthMonth" type = "birthMonth" required >
+                                <option value="1">1월</option>
+                                <option value="2">2월</option>
+                                <option value="3">3월</option>
+                                <option value="4">4월</option>
+                                <option value="5">5월</option>
+                                <option value="6">6월</option>
+                                <option value="7">7월</option>
+                                <option value="8">8월</option>
+                                <option value="9">9월</option>
+                                <option value="10">10월</option>
+                                <option value="11">11월</option>
+                                <option value="12">12월</option>
+                            </select>
+                            <input id = "birthDay" name ="birthDay" type = "birthDay" required autocomplete="off" >
+                    <span class="alert_msg must_birth"> 필수 정보 입니다.  </span>
+                </li>
             </ul>
         </fieldset>
         <fieldset>
-            <button type="submit" id="submit_button">제출</button> <!-- 제출버튼에 id 넣음 -->
+            <button type="button" id="submit_button">제출</button> <!-- 제출버튼에 id 넣음 -->
         </fieldset>
     </form>
     <script src="./register.js"></script> <!-- js파일을 이렇게 넣습니다. -->
+    
 </body>
+    
 </html>
