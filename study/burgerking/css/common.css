@@ -90,7 +90,7 @@
 .header__Mnav > .trigger > .mobile.close {
 	position: absolute;
 	top: 20px;
-	left: 20px;
+	left: 10px;
 	font-size: 1.2rem;
 }
 
@@ -322,6 +322,12 @@
 	.header__nav > .menu .main__list {
 		position: relative;
 	}
+
+	.header__nav > .menu .main__list > i {
+		padding-left: 10px;
+	}
+
+
 
 	.header__nav > .menu .main__list .list__drop {
 		display: none;

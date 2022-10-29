@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script> 
+    <style>
+        .aqua{background-color: aqua;}
+        .red{background-color: red;}
+        .blue{background-color: blue;}
+        .purple{background-color: purple;}
+
+    </style>
+</head>
+<body>
+    <div class = "par">
+        <ul class="wrap">
+            <li class = "list_1">
+                <span class = "list_1">리</span>
+                <span class = "child1">드</span>
+                <span class = "list_2">스</span>
+                <span class = "child3">라</span>
+                <span class = "list_3">트</span>
+                <span class = "child5">군</span>
+            </li>
+            <li class="list_2">d</li>
+            <li class="list_3">d</li>
+            <li class="list_4">d</li>
+
+
+        </ul>
+        <h1 id="title"> 제목 </h1>
+        <a href="http://naver.com" target="blank"> 네이버 </a>
+        <p class="red" >ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇ</p>
+    </div>
+
+    <script>
+        $(function(){
+            
+            // $("p").addClass("aqua") //css클래스를 넣을 수 있는 addClass
+            // $("p").removeClass("red") // css 클래스를 뺼 수 있는 removeClass
+            // $("p").toggleClass("blue") // 없으면 적용, 있으면 없애버리는 toggleClass
+
+             console.log($("p").hasClass("green")); // 해당 클래스가 있는지 없는지 확인하는 hasClass
+            
+            
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // var result_1 = $(".list_1").html(); /* 자식들을 테그포함 전부 가져옴 */
+            // console.log(result_1);
+            // $(".list_1").html("<a href='#'>클림</a>") /* 자식태그들 대신 링크로 바꿔버림 */
+
+            // var result_1 = $(".list_1").text(); /* 태그를 빼고 자식의 문자열만 전부 가져옴 */
+            // console.log(result_1);
+            // $(".list_1").text("<a href='#'>클림</a>") /* 자식들 대신 문자열로 대체함 */
+
+            // console.log($("a").attr("href")); // a태그의 href속성의 값을 가져오는 attr
+            // console.log($("a").attr("target"));
+           
+            // $("a").attr({
+            //     "href" :  "https://www.google.com/?gws_rd=ssl",
+            //     "target" : "_parent"
+            // })
+
+            // $("a").removeAttr("target")
+                
+               
+
+        })
+    </script>
+</body>
+</html>

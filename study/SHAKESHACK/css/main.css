@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+@import url('./common.css');
+
+.wrap{
+    width : 1100px;
+    margin : 0 auto;
+    height : 100%
+ }
+ 
+ .imgSession{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+ }
+    /* 사진 밑 상단 메뉴 세션 */
+
+ .menuMove{
+     margin: 0 auto;
+     width: 90%;
+     border-bottom: 1px solid black;
+     text-align: center;
+ }
+
+
+ .menuMove .menuMove__move{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+ }
+
+ .menuMove .menuMove__move li{
+    padding: 15px;
+ }
+
+    /* 메뉴판 시작 */ 
+
+.menuDetails{
+    margin: 0 auto;
+    width : 90%;
+    padding-bottom: 50px;
+}
+
+    /* 햄버거 세션 */
+
+    .menuDetails__Hamburger{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .Hamburger__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Hamburger__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Hamburger__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+
+    /* 치킨 세션 */
+    .menuDetails__Chicken{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Chicken__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Chicken__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Chicken__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 플랫탑도그 */
+    .menuDetails__Flat-top-dogs{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Flat-top-dogs__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Flat-top-dogs__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Flat-top-dogs__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 사이드 */
+    .menuDetails__Side{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Side__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Side__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Side__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 커스타드 */
+    .menuDetails__Custard{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Custard__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Custard__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Custard__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 콘크리트 */
+    .menuDetails__Concretes{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Concretes__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Concretes__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Concretes__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 음료 */
+    .menuDetails__Drinks{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Drinks__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Drinks__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Drinks__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 아침메뉴 */
+    .menuDetails__Breakfast{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .Breakfast__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Breakfast__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Breakfast__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+    /* 강아지메뉴 */
+    .menuDetails__Woof{
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .Woof__Up{
+        display: flex;
+        justify-content: center;
+        flex : 1;
+        padding: 10px;
+    }
+    .Woof__Up .Up__Photosession{
+        width: 50%;
+    }
+
+    .Woof__Up .Up__Descsession{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+
+
+
+

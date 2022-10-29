@@ -12,7 +12,3 @@ var swiper1 = new Swiper('.mySwiper', {
     },
     speed: 800,
 });
-
-swiper1.on('slideChange', function () {
-  console.log('slide changed');
-});

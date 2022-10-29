@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- library 형태이므로 가져와줘야함 -->
+</head>
+<body>
+    <p>
+        <button class="btn1"> 버튼 1 </button>
+    </p>
+
+    <p>내용1</p>
+
+    <p>
+        <button class="btn2"> 버튼 2 </button>
+    </p>
+    <p>내용2</p>
+
+
+    <script>
+        $(function(){
+            $('.btn1').on({
+                "mouseover focus" : function(){
+                    $('.btn1').parent().next().css({'color':'red'})
+                },
+                "click" : function(){
+                    $('.btn1').parent().next().css({'color':'blue'})
+
+                }
+            })
+            // 이벤트 여러개를 넣을 수 있는 'on'
+            $('.btn2').on({
+                // 이벤트 mouseover - 마우스가 올라 갈 때 / focus-주목받을 때 선언
+                "mouseover focus": function(){
+                    $('.btn2').parent().next().css({"color":"blue"}) 
+                }, //mouseout - 마우스가 멀어질 때 / blur - focus를 벗어날 때
+                "mouseout blur": function(){
+                    $('.btn2').parent().next().css({"color":"black"}) 
+                }
+            })
+
+
+
+            //이벤트 제거하고 싶은 경우
+            // $(".btn1").off("click") // 제거 할 아이와 제거할 function을 적으면 됨
+            // $(".btn2").off("mouseover focus") // 2개 제거하고 싶으면 그냥 2개 적으면 됨
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- library 형태이므로 가져와줘야함 -->
+</head>
+<body>
+    <div id="wrap">
+        <p> 내용1 </p>
+        <p> 내용2 </p>
+        <p> 내용3 </p>
+    </div>
+
+    <div id="wrap2">
+        <h1> 제목 </h1>
+    </div>
+
+
+
+    <script>
+        $(function(){
+            $("h1").replaceWith("<h3><></h3>") // h1을 바꿔버림
+            $("<h3><></h3>").replaceAll("h1") // 구성요소 반대
+            
+            
+
+            
+            
+            
+            // console.log($('#wrap').children().clone()); /* wrap의 자식들을 그대로 복제해서 띄워줌. [p,p,p] */
+            // var copy = $('#wrap').children().clone()
+            // $("#wrap2").append(copy) // #wrap를 clone 해온 것을 wrap2에 그대로 붙임.
+
+            // // $("#wrap").remove() // wrap아래 애들을 전부 삭제함
+            // $("#wrap").empty() // wrap아래 하위애들을 비워둠
+
+
+
+
+
+            // $("#wrap p:eq(2)").after("<p>After</p>")
+            // $("#wrap p:eq(1)").before("<p>Before</p>") /* 내가 원하는 태그를 바로 뒤에 붙일 수 있음 */
+            
+            // $("<p>After</p>").insertAfter("#wrap p:eq(2)") /* after과 결과값은 동일하나 적는 순서만 앞뒤가 바뀜 */
+            // $("<p>Before</p>").insertbefore("#wrap p:eq(1)")
+
+            // $("#wrap").append("<p>내용4</p>") /* #wrap의 맨 뒤에 갖다 붙임 append */
+            // $("#wrap").prepend("<p>내용0</p>") /* #wrap의 맨 앞에 갖다 붙이는 prepend */
+
+            // $("<p>내용4</p>").appendTo("#wrap")
+            // $("<p>내용0</p>").prependTo("#wrap")/* 이것또한 앞뒤만 바뀌는 WWW */
+
+
+        })
+    </script>
+</body>
+</html>

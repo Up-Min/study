@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        async function asyncFunc(){ //function 앞에 async 추가
+            let promise = new Promise((resolve,reject)=> {
+                setTimeout(()=>{resolve("완료")}, 2000)
+            })
+
+            let result = await promise //promise 앞에 await 추가
+            // await 밑에 아이들은 promise가 끝날때까지 끝나지 않음.
+            // 결과 '완료'
+
+            alert(result) // 돌려본 결과. 왜 안나옴?
+            //resolve가 2초 뒤에 실행이 되어버림 그래서 'object Promise' 가 결과값으로 나옴
+        }
+        asyncFunc() // 이거 우째함? -> async_await로 가능
+
+
+    </script>
+
+</body>
+</html>

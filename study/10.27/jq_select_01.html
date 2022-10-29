@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- library 형태이므로 가져와줘야함 -->
+</head>
+<body>
+    <div class = "par">
+        <ul class="wrap">
+            <li class = "list_1">
+                <span class = "list_1">리</span>
+                <span class = "child1">드</span>
+                <span class = "list_2">스</span>
+                <span class = "child3">라</span>
+                <span class = "list_3">트</span>
+                <span class = "child5">군</span>
+            </li>
+            <li class="list_2">d</li>
+            <li class="list_3">d</li>
+            <li class="list_4">d</li>
+
+
+        </ul>
+        <h1 id="title"> 제목 </h1>
+    </div>
+
+
+    <script>
+        $(function(){
+                 $(".list_1 span").slice(1,3).css("border", "3px solid red")
+
+                $('.list_1 span').css('color','red') 
+            // /* nth-child는 index 번호 아니고 그냥 3번째 */
+            // $(".list_1 span:nth-child(3)").css("border", "3px solid red")
+            // $(".list_1 span:last-of-type").css("border", "3px solid purple") 
+            // $(".wrap li:first").css("border","3px solid black")
+            // $(".wrap li:last").css("border","3px solid red")
+            // $(".wrap li:odd").css("border","3px solid hotpink")
+            // $(".wrap li:even").css("border","3px solid purple")
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const promise1 = new Promise(function(resolve, reject){
+            resolve('success') //문자열 하나 실어보냄
+
+        })
+
+        promise1.then((result) => {
+            console.log(result); //약속했어요 데이터를 보내기로(new Promise) 그리고(then), 데이터(result)를 출력해요 
+        })
+
+        
+
+    </script>
+
+</body>
+</html>

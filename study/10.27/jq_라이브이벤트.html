@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script> <!-- library 형태이므로 가져와줘야함 -->
+</head>
+<body>
+
+    <div>
+        <p>
+        <button class="btn1"> 버튼 1 </button>
+        </p>
+
+        <p class="btn_test">
+        <button class="btn2"> 버튼 2 </button>
+        </p>
+    </div>
+
+
+    <script>
+        $(function(){
+
+            $('.btn1.on').on("mouseover focus", function(){
+                alert('hi~')
+            }) //btn1 의 상태가 on인 상태에서 마우스에 포커스가 잡혔을 떄 움직이게 함.
+            /* 동적요소(중간에 넣었다 뺐다)가 많은 제이쿼리 . 그러나 선언을 안하면 작동을 안한다.
+            그래서 라이브 이벤트로 전역 선언과 같이 진행한다. */
+
+            $('.btn1').addClass("on") //btn1 의 상태를 on으로
+
+            // 라이브 이벤트 방식
+
+            // 선택자를 btn2의 부모태그나 document로 선언해줘야함
+            //발생시키고 싶은 클래스와 상태를 넣는다
+            // 그 다음에 function을 실행시킨다
+            $('.btn_test').on("mouseover focus", ".btn2.on", function(){
+                alert('hi!')
+            }) 
+            $('.btn2').addClass("on")
+
+
+
+
+        })
+    </script>
+</body>
+</html>
