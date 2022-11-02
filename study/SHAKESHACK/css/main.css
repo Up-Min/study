@@ -1,9 +1,14 @@
 @charset "utf-8";
+@import url('./Food&Drink.css');
 
-@import url('./common.css');
+
+html{
+    scroll-behavior: smooth;
+    delay : 0.5s;
+    max-width: 1000000px;
+}
 
 .wrap{
-    width : 1100px;
     margin : 0 auto;
     height : 100%
     
@@ -13,17 +18,39 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    background-color: #60ae2b;
+ }
+
+ .menuSession{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
  }
 
  .toHead{
-    margin-left: 1000px;
+    display: none;
+    margin-left: 1030px;
+    position: fixed;
+    bottom: 340px;
+    text-align: center;
+    color: #60ae2b;
  }
+
+ .toHead .Head__Up{
+    font-size: 2rem;
+    margin-bottom: 10px;
+ }
+
+ .toHead .Head__Down{
+    margin-bottom: 10px;
+ }
+
  
     /* 사진 밑 상단 메뉴 세션 */
 
  .menuMove{
      margin: 0 auto;
-     width: 90%;
+     width: 85%;
      border-bottom: 1px solid black;
      text-align: center;
  }
@@ -32,18 +59,45 @@
  .menuMove .menuMove__move{
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
  }
 
  .menuMove .menuMove__move li{
-    padding: 15px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+ }
+
+ .menuMove .menuMove__move li a{
+    padding: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #222;
+    /* -webkit-transition: all 0.3s; */
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    margin-right: 10px;
+ }
+
+ .menuMove .menuMove__move li a+a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
  }
 
     /* 메뉴판 시작 */ 
 
 .menuDetails{
     margin: 0 auto;
-    width : 90%;
+    width : 80%;
     padding-bottom: 50px;
 }
 
@@ -267,5 +321,45 @@
     }
 
 
+    .Concretes__Down .Down__List .List_Storeinfo{
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        border-bottom: 5px solid black;
+    }
 
+    .List__Storeconcrete{
+        width:100%;
+    }
 
+    .List__Storeconcrete ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .List__Storeconcrete .Storeconcrete__List li{
+        width: 30%;
+        flex-direction: row;
+        border: 1px solid gray;
+        justify-content: center;
+    }
+
+     li .Store{
+        border: 1px solid gray;
+        justify-content: center;
+        text-align: center;
+        vertical-align:middle
+    }
+    
+    li .stMenu{
+        width: 65%;    
+        border: 1px solid gray;
+        justify-content: right;
+    }
+
+    .Storeconcrete__List li .stMenu p{
+        border: 1px solid gray;
+        
+    }
