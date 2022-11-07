@@ -1,95 +1,118 @@
+/* leesangmin : Food&Drink common.js merge */
+/* to scroll TOP switch */
+
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 300) {
+    $('.toHead').fadeIn();
+  } else {
+    $('.toHead').fadeOut();
+  }
+});
+
+$('.toHead').click(function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+$('.toHead').mouseover(function () {
+  $('.toHead').css('color', 'grey');
+});
+
+$('.toHead').mouseout(function () {
+  $('.toHead').css('color', '#60ae2b');
+});
 
 /* nav 메뉴별 name 전환  */
 
-$('.move__Bur').mouseover(function(){
-    $('.move__Bur__EN').css('opacity', '0')
-    $('.move__Bur__KO').css('opacity', '1')
-    
-})
-$('.move__Bur').mouseout(function(){
-    $('.move__Bur__EN').css('opacity', '1')
-    $('.move__Bur__KO').css('opacity', '0')
-})
+$('.move__Bur').mousegiover(function () {
+  $('.move__Bur__EN').css('opacity', '0');
+  $('.move__Bur__KO').css('opacity', '1');
+});
+$('.move__Bur').mouseout(function () {
+  $('.move__Bur__EN').css('opacity', '1');
+  $('.move__Bur__KO').css('opacity', '0');
+});
 
-$('.move__Chc').mouseover(function(){
-    $('.move__Chc__EN').css('opacity', '0')
-    $('.move__Chc__KO').css('opacity', '1')
-})
-$('.move__Chc').mouseout(function(){
-    $('.move__Chc__EN').css('opacity', '1')
-    $('.move__Chc__KO').css('opacity', '0')
-})
+$('.move__Chc').mouseover(function () {
+  $('.move__Chc__EN').css('opacity', '0');
+  $('.move__Chc__KO').css('opacity', '1');
+});
+$('.move__Chc').mouseout(function () {
+  $('.move__Chc__EN').css('opacity', '1');
+  $('.move__Chc__KO').css('opacity', '0');
+});
 
-$('.move__Ftg').mouseover(function(){
-    $('.move__Ftg__EN').css('opacity', '0')
-    $('.move__Ftg__KO').css('opacity', '1')
-})
-$('.move__Ftg').mouseout(function(){
-    $('.move__Ftg__EN').css('opacity', '1')
-    $('.move__Ftg__KO').css('opacity', '0')
-})
+$('.move__Ftg').mouseover(function () {
+  $('.move__Ftg__EN').css('opacity', '0');
+  $('.move__Ftg__KO').css('opacity', '1');
+});
+$('.move__Ftg').mouseout(function () {
+  $('.move__Ftg__EN').css('opacity', '1');
+  $('.move__Ftg__KO').css('opacity', '0');
+});
 
-$('.move__Sid').mouseover(function(){
-    $('.move__Sid__EN').css('opacity', '0')
-    $('.move__Sid__KO').css('opacity', '1')
-})
-$('.move__Sid').mouseout(function(){
-    $('.move__Sid__EN').css('opacity', '1')
-    $('.move__Sid__KO').css('opacity', '0')
-})
+$('.move__Sid').mouseover(function () {
+  $('.move__Sid__EN').css('opacity', '0');
+  $('.move__Sid__KO').css('opacity', '1');
+});
+$('.move__Sid').mouseout(function () {
+  $('.move__Sid__EN').css('opacity', '1');
+  $('.move__Sid__KO').css('opacity', '0');
+});
 
-$('.move__Cus').mouseover(function(){
-    $('.move__Cus__EN').css('opacity', '0')
-    $('.move__Cus__KO').css('opacity', '1')
-})
-$('.move__Cus').mouseout(function(){
-    $('.move__Cus__EN').css('opacity', '1')
-    $('.move__Cus__KO').css('opacity', '0')
-})
+$('.move__Cus').mouseover(function () {
+  $('.move__Cus__EN').css('opacity', '0');
+  $('.move__Cus__KO').css('opacity', '1');
+});
+$('.move__Cus').mouseout(function () {
+  $('.move__Cus__EN').css('opacity', '1');
+  $('.move__Cus__KO').css('opacity', '0');
+});
 
-$('.move__Cct').mouseover(function(){
-    $('.move__Cct__EN').css('opacity', '0')
-    $('.move__Cct__KO').css('opacity', '1')
-})
-$('.move__Cct').mouseout(function(){
-    $('.move__Cct__EN').css('opacity', '1')
-    $('.move__Cct__KO').css('opacity', '0')
-})
+$('.move__Cct').mouseover(function () {
+  $('.move__Cct__EN').css('opacity', '0');
+  $('.move__Cct__KO').css('opacity', '1');
+});
+$('.move__Cct').mouseout(function () {
+  $('.move__Cct__EN').css('opacity', '1');
+  $('.move__Cct__KO').css('opacity', '0');
+});
 
-$('.move__Drk').mouseover(function(){
-    $('.move__Drk__EN').css('opacity', '0')
-    $('.move__Drk__KO').css('opacity', '1')
-})
-$('.move__Drk').mouseout(function(){
-    $('.move__Drk__EN').css('opacity', '1')
-    $('.move__Drk__KO').css('opacity', '0')
-})
+$('.move__Drk').mouseover(function () {
+  $('.move__Drk__EN').css('opacity', '0');
+  $('.move__Drk__KO').css('opacity', '1');
+});
+$('.move__Drk').mouseout(function () {
+  $('.move__Drk__EN').css('opacity', '1');
+  $('.move__Drk__KO').css('opacity', '0');
+});
 
-$('.move__Bft').mouseover(function(){
-    $('.move__Bft__EN').css('opacity', '0')
-    $('.move__Bft__KO').css('opacity', '1')
-})
-$('.move__Bft').mouseout(function(){
-    $('.move__Bft__EN').css('opacity', '1')
-    $('.move__Bft__KO').css('opacity', '0')
-})
+$('.move__Bft').mouseover(function () {
+  $('.move__Bft__EN').css('opacity', '0');
+  $('.move__Bft__KO').css('opacity', '1');
+});
+$('.move__Bft').mouseout(function () {
+  $('.move__Bft__EN').css('opacity', '1');
+  $('.move__Bft__KO').css('opacity', '0');
+});
 
-$('.move__Wof').mouseover(function(){
-    $('.move__Wof__EN').css('opacity', '0')
-    $('.move__Wof__KO').css('opacity', '1')
-})
-$('.move__Wof').mouseout(function(){
-    $('.move__Wof__EN').css('opacity', '1')
-    $('.move__Wof__KO').css('opacity', '0')
-})
-
+$('.move__Wof').mouseover(function () {
+  $('.move__Wof__EN').css('opacity', '0');
+  $('.move__Wof__KO').css('opacity', '1');
+});
+$('.move__Wof').mouseout(function () {
+  $('.move__Wof__EN').css('opacity', '1');
+  $('.move__Wof__KO').css('opacity', '0');
+});
 
 /* 메뉴별 자세히 보기 설정 */
-
-$('.seeDetails').click(function(){
-    $(this).next().slideToggle(500)
-    $(this).next().siblings(Down).slideUp();
-})
+$('.seeDetails').click(function () {
+  $('.seeDetails')
+    .not(this)
+    .each(function () {
+      $(this).next().slideUp();
+    });
+  $(this).next().slideToggle(500);
+});
 
 // $('.seeDetails_1').click(function(){
 //     $('.Hamburger__Down').toggle()
@@ -192,5 +215,3 @@ $('.seeDetails').click(function(){
 //     $('.Breakfast__Down').css('display','none')
 //     $('.Woof__Down').toggle()
 // })
-
-

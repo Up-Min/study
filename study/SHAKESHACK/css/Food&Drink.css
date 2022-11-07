@@ -1,57 +1,459 @@
 @charset "utf-8";
 @import url('./reset.css');
 
-.Down  {
-    display: none;
+.Down {
+  display: none;
 }
 
 .Down__List {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: left;
-    padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 10px;
 }
-
 
 .Down__List ul {
-    padding: 15px;
-    width: 45%;
+  padding: 15px;
+  width: 46%;
 }
 
-.Down__List ul li{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5px;
-    width: 100%;
-    text-align: left;
+.Down__List ul li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
 }
 
-.Down__List ul li .name{
-    padding: 5px;
+.Down__List ul li .name {
+  padding: 5px;
 }
 
-.Down__List ul li .under{
-    display: flex;
-    justify-content: left;
-    flex-direction: row;
-    padding: 10px;
+.Down__List ul li .under {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  padding: 10px;
 }
 
-.Down__List ul li .under p{
-    padding: 10px;
+.Down__List .addPrice {
+  width: 100%;
 }
 
-.Up__Descsession{
-    text-align: left;
+.Down__List .addPrice .price {
+  text-align: right;
 }
 
-.Up__Descsession .DescPhoto{
-    padding : 15px
+.Down__List ul li .under p {
+  padding: 10px;
 }
 
-.Up__Descsession .DescText{
-    padding: 15px;
+.Up__Descsession {
+  text-align: left;
 }
 
+.Up__Descsession .DescPhoto {
+  padding: 15px;
+}
+
+.Up__Descsession .DescText {
+  padding: 15px;
+}
+
+/* leesangmin : Food&Drink main.css merge */
+
+html {
+  scroll-behavior: smooth;
+  max-width: 1000000px;
+}
+
+.wrap {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.imgSession {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #60ae2b;
+}
+
+.menuSession {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* add MAP session */
+.mapAround {
+  display: block;
+  position: fixed;
+  top: 400px;
+  left: 5%;
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+}
+
+#mapDesc > a {
+  margin-bottom: 15px;
+}
+/* MAP session OVER */
+
+.toHead {
+  display: none;
+  margin-left: 1030px;
+  position: fixed;
+  bottom: 340px;
+  text-align: center;
+  color: #60ae2b;
+}
+
+.toHead .Head__Up {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.toHead .Head__Down {
+  margin-bottom: 10px;
+}
+
+/* 사진 밑 상단 메뉴 세션 */
+
+.menuMove {
+  margin: 0 auto;
+  width: 85%;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.menuMove .menuMove__move {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.menuMove .menuMove__move li {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+.menuMove .menuMove__move li a {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  /* -webkit-transition: all 0.3s; */
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  margin-right: 10px;
+}
+
+.menuMove .menuMove__move li a + a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/* 메뉴판 시작 */
+
+.menuDetails {
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 50px;
+}
+
+/* 햄버거 세션 */
+
+.menuDetails__Hamburger {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.Hamburger__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Hamburger__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Hamburger__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+
+/* 치킨 세션 */
+.menuDetails__Chicken {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Chicken__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Chicken__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Chicken__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 플랫탑도그 */
+.menuDetails__Flat-top-dogs {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Flat-top-dogs__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Flat-top-dogs__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Flat-top-dogs__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 사이드 */
+.menuDetails__Side {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Side__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Side__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Side__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 커스타드 */
+.menuDetails__Custard {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Custard__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Custard__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Custard__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 콘크리트 */
+.menuDetails__Concretes {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Concretes__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Concretes__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Concretes__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 음료 */
+.menuDetails__Drinks {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.Drinks__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Drinks__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Drinks__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 아침메뉴 */
+.menuDetails__Breakfast {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid#eee;
+}
+.Breakfast__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Breakfast__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Breakfast__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+/* 강아지메뉴 */
+.menuDetails__Woof {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.Woof__Up {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+.Woof__Up .Up__Photosession {
+  width: 50%;
+}
+
+.Woof__Up .Up__Descsession {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+
+.Down .Down__List .List_Storeinfo {
+  height: 25px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.List__Storeconcrete {
+  width: 100%;
+}
+
+.List__Storeconcrete ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid black;
+  font-size: 0.7rem;
+  line-height: 19px;
+  padding: 0px;
+}
+
+.List__Storeconcrete .Storeconcrete__List li {
+  width: 33.2%;
+  flex-direction: row;
+  border-collapse: collapse;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  justify-content: left;
+  padding: 0;
+}
+
+.List__Storeconcrete ul:nth-of-type(1) {
+  border-left: 1px solid #ccc;
+}
+.List__Storeconcrete ul:nth-of-type(4n) {
+  border-left: 1px solid #ccc;
+}
+
+li .Store {
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+}
+
+li .Store p {
+  padding-top: 25%;
+}
+
+li .stMenu {
+  width: 74%;
+  border-left: 1px solid #ccc;
+}
+
+.Storeconcrete__List li .stMenu p {
+  padding-left: 5px;
+}
+
+li .stMenu p:nth-of-type(2) {
+  background-color: #2c5e0b;
+  opacity: 50%;
+}
